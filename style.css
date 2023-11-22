@@ -1,0 +1,540 @@
+
+html
+{
+  scroll-behavior: smooth;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(115, 42, 179);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c9c8c8;
+}
+
+
+
+
+#Deposit_a
+{
+
+  scroll-margin-top: 100px;
+}
+
+#top
+{
+  scroll-margin-top: 150px;
+}
+
+#pricing
+{
+  scroll-margin-top: 100px;
+}
+#Acces
+{
+  scroll-margin-top: 100px;
+}
+
+body
+{
+  background-color: rgb(20, 20, 20);
+  padding: 0;
+  margin: 0;
+  background-image: url('images/Background.jpg');
+  background-color: #0e0e0e;
+}
+
+
+
+header
+{
+  position: sticky;
+  top: 0;
+  position: sticky;
+  z-index: 500;
+  align-self:auto;
+}
+
+.fa-sharp
+{
+  color: rgb(131, 67, 188);
+  word-spacing: 10px;
+}
+
+.Language
+{
+
+  background-color: rgb(255, 255, 255);
+  width: 900px;
+  clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
+  color: rgb(0, 0, 0);
+  position:absolute;
+  float: inline-end;
+ margin-bottom: 50px;
+ padding-bottom: 50px;
+  width: 200px;
+  padding-top: 42.5px;
+ 
+ text-align: center;
+
+ font-size: 22px;
+
+}
+#Header
+{
+
+background-color: rgb(82, 7, 173);
+width: 99vw;
+height: 120px;
+z-index: 5;
+clip-path: polygon(0 0, 95% 0, 100% 100%, 100px 100%);
+margin: 0px;
+padding: 0px;
+  
+
+}
+
+
+#Logo_back
+{
+background-color:  rgb(11, 11, 11);
+width: 99vw;
+height: 120px;
+clip-path: polygon(0 0, 94.3% 0, 99% 92%, 90px 91%);
+padding: 0px;
+margin: 0px;
+float: inherit;
+}
+
+#Logo_Shadow
+{
+    width: 500px;
+    height: 110px;
+    background-color:  rgb(82, 7, 173);
+    clip-path: polygon(0px 0px, 400px 0, 100% 100%, 0% 100%);
+    padding: 0px;
+    text-align: center; 
+    margin: 0px;
+   
+    
+}
+
+#Logo_Shadow
+{
+  background-color: rgb(255, 255, 255);
+  width: 500px;
+  margin: 0px;
+}
+ 
+ #placeholder
+ {
+  width: 500px;
+ }
+
+
+#Logo_SVG
+{
+  padding-top: 30px;
+  padding-left: 80px;
+  width: 60%;
+  height: 50%;
+  
+}
+
+
+
+.Equipment, .Acces, .Pricing, .Contact, .Language{
+  position:absolute;
+  z-index: 500;
+  float: inline-end;
+ margin-bottom: 50px;
+ padding-bottom: 50px;
+  width: 200px;
+  padding-top: 42.5px;
+ text-align: center;
+ color: white;
+ font-size: 22px;
+ font-family: 'Gabarito', sans-serif;
+}
+
+.Equipment
+{
+
+margin-left: 580px;
+}
+
+.Acces
+{
+margin-left: 850px;
+}
+
+.Pricing
+{
+margin-left: 1120px;
+}
+.Contact
+{
+margin-left: 1390px;
+}
+.Language
+{
+  margin-left: 1600px;
+  color: #0e0e0e;
+}
+
+.Equipment::before, .Acces::before, .Pricing::before, .Contact::before,.Language::before{
+  content: "";
+  position:absolute;
+  margin-top: 30px;
+  width: 0;
+  height: 5px; /* Grubość kreski */
+  background-color: rgb(82, 7, 173); /* Kolor kreski */
+  bottom: 150;
+  left: 50;
+  transition: width 0.5s; /* Dodanie animacji do kreski */
+}
+
+/* Styl po najechaniu na hiperłącze */
+.Acces:hover::before {
+ 
+  background-color: rgb(82, 7, 173);
+}
+.Equipment:hover::before
+{
+  width: 79%;
+}
+.Acces:hover::before
+{
+  width: 65%;
+}
+.Pricing:hover::before
+{
+  width: 44%;
+}
+.Contact:hover::before
+{
+  width: 54%;
+}
+.Language:hover::before
+{
+  width: 25%;
+}
+
+
+
+
+
+
+#Baner
+{
+  
+  margin-top: 50px;
+  margin-left: 100px;
+  
+  color: rgb(255, 255, 255);
+  height: 80vh;
+  background-color: rgb(45, 45, 45);
+  width: 90%;
+  border-top: 10px solid rgb(82, 7, 173);
+  border-bottom: 10px solid rgb(82, 7, 173);
+  background-image: url('images/DJ.jpg');
+  background-size: 200vh;
+  background-repeat: none;
+  background-blend-mode: overlay;
+
+}
+
+#Baner_text
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+  height: 90%;
+  padding-top: 50px;
+  text-align: center;
+}
+
+#Baner_img
+{
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
+}
+
+
+
+
+
+#Banner_line
+{
+  width: 78%;
+}
+
+h1
+{
+  letter-spacing: 10px;
+font-size: 70px;
+font-family: 'Gabarito', sans-serif;
+
+}
+h2
+{
+  margin-top: 80px;
+  z-index: 50;
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 200;
+  line-height: 50px;
+  text-align: justify;
+}
+
+#Deposit
+{
+  margin-top: 50px;
+  margin-left: 100px;
+  color: rgb(255, 255, 255);
+  height: 80vh;
+  /* background-color: rgba(45, 45, 45, 0.316); */
+  width: 90%;
+  border-top: 10px solid rgb(82, 7, 173);
+  
+}
+
+#Deposit_1, #Deposit_2, #Deposit_3, #Deposit_4
+{
+  margin-left: 2.5%;
+  margin-top: 2%;
+  background-color: rgba(0, 0, 0, 0.643);
+  width: 22%;
+  height: 70vh;
+  float:left;
+  outline: 8px solid rgb(82, 7, 173);
+  
+}
+
+
+#Accessories_box
+{
+
+  background-color: rgba(0, 0, 0, 0.643);
+  height: auto;
+  width: 86%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#Accessories, #Accessories2, #Accessories3
+{
+  user-select: none;
+  cursor: pointer;
+  padding-left: 50px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 8px solid rgb(82, 7, 173);
+  color: white;
+  font-size: 20px;
+  text-align: justify;
+  font-family: 'Archivo', sans-serif;
+  line-height: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  z-index: 50;
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 200;
+  line-height: 50px;
+  text-align: center;
+ 
+}
+
+#price
+{
+  cursor: pointer;
+  padding-left: 50px;
+  width: 90%;
+  height:70px;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 8px solid rgb(82, 7, 173);
+  color: white;
+  font-size: 20px;
+  text-align: justify;
+  font-family: 'Archivo', sans-serif;
+  line-height: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  z-index: 50;
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 200;
+  line-height: 50px;
+  text-align: center;
+}
+
+.Deposit_IMG
+{
+  margin-left: 2.5%;
+  margin-top: 2%;
+  /* background-color: rgb(0, 255, 38); */
+  width: 95%;
+  height: 25vh;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#Speaker_img
+{
+
+  padding-left: 25%;
+  width: 50%;
+  
+}
+
+.Deposit_title
+{
+  margin-bottom: 20px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Gabarito', sans-serif;
+  font-weight: 500;
+}
+
+.Deposit_TXT
+{
+  margin-left: 2.5%;
+  margin-top: 2%;
+  width: 95%;
+  height: 25vh;
+  font-size: 20px;
+  text-align: justify;
+  font-family: 'Archivo', sans-serif;
+  line-height: 30px;
+
+}
+
+
+#Acces_IMG
+{
+  margin-left: 2.5%;
+  margin-top: 2%;
+   /* background-color: rgba(45, 45, 45, 0.316); */
+  width: 60%;
+  height: 70vh;
+ float:left;
+
+}
+#Map
+{
+  width: 90%;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+#Acces_TXT
+{
+  
+  margin-left: 2.5%;
+  margin-top: 2%;
+  /* background-color: rgba(255, 4, 4, 0.282); */
+  width: 32%;
+  height: 70vh;
+  float: left;
+  font-size: 35px;;
+  text-align: justify;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 200;
+}
+
+table
+{
+  font-family: 'Archivo', sans-serif;
+}
+.cennik {
+  margin-top: 50px;
+  font-size: 2vw;
+  text-align: left;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(255, 255, 255);
+  border:4px solid rgb(82, 7, 173);
+  padding: 30px;
+}
+#th_1{
+  padding-left: 25%;
+  text-align: left;
+  height: 100px;
+}
+td
+{
+  height: 90px;
+}
+
+#Contact
+{
+  font-family: 'Archivo', sans-serif;
+  margin-top: 50px;
+  margin-left: 100px;
+  color: rgb(255, 255, 255);
+  height: 40vh;
+  /* background-color: rgba(45, 45, 45, 0.316); */
+  width: 90%;
+  border-top: 10px solid rgb(82, 7, 173);
+ 
+  letter-spacing: 5px;
+}
+
+.contact_txt
+{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.Title{
+color: aliceblue;
+margin-bottom: 5px;
+
+text-align: center;
+font-size: 50px;
+font-family: 'Gabarito', sans-serif;
+font-weight: 500;
+}
+
+.Socials
+{
+  width: 300px;
+  height: 100px;
+ 
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffffd1;
+  font-family: 'Gabarito', sans-serif;
+  font-size: 30px;
+}
+.fa-instagram
+{
+  font-size: 70px;
+}
