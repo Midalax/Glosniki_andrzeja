@@ -45,11 +45,6 @@ function Supplement_C() {
 }
 
 
-////////////////////////////////////////////////////////
-
-
-// console.log("  Option A: "+Option_state[0]+"  Option B: "+ Option_state[1]+"  Option C: "+ 
-
 
 
 function Deselect(Except, price_except) {
@@ -64,16 +59,14 @@ function Deselect(Except, price_except) {
         Except=true;
     }
     console.log(Option_price_buffor);
-
+    price(Option_price_buffor*(-1));
 }
 
-function Select(Option_to_select, OptionPrice)
+function Select(Option_to_select)
 {
     Option_to_select.style.outlineColor = "#07ad15";
     console.log(Option_state);
-    Option_price_buffor=OptionPrice;
-    price(Option_price_buffor);
-    //test
+   
 }
 
 function Option_A() {
@@ -83,8 +76,9 @@ function Option_A() {
     Deselect(Option_state[0]);
     Option_state[0] = !Option_state[0];
     Select(Option_A, Option_A_price);
+    Option_price_buffor = Option_A_price;
+    price(Option_price_buffor);
     
-
 }
 
 function Option_B() {
@@ -92,27 +86,30 @@ function Option_B() {
     Deselect();
     var Option_B = document.getElementById("Deposit_2");
     Option_state[1] = !Option_state[1];
-    Select(Option_B,Option_B_price);
-
+    Select(Option_B);
+    Option_price_buffor = Option_B_price;
+    price(Option_price_buffor);
+    
 }
 
 function Option_C() {
     Deselect();
     var Option_C = document.getElementById("Deposit_3");
     Option_state[2] = !Option_state[2];
-    Select(Option_C,Option_C_price);
-
+    Select(Option_C);
+    Option_price_buffor = Option_C_price;
+    price(Option_price_buffor);
 }
 
 function Option_D() {
     Deselect();
     var Option_D = document.getElementById("Deposit_4");
     Option_state[3] = !Option_state[3];
-    Select(Option_D,Option_D_price);
-   
+    Select(Option_D);
+    Option_price_buffor = Option_D_price;
+    price(Option_price_buffor);
 
 }
-////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////
 function TrunONOFF(OptionONNOFF, OptionDiv, OptionPrice) {
@@ -128,7 +125,7 @@ function TrunONOFF(OptionONNOFF, OptionDiv, OptionPrice) {
     }
 
 }
-///////////////////////////////////////////////////////////////
+
 
 
 //////////////////////////////////////////////////////////////
@@ -147,48 +144,3 @@ function price(OptionalPrice) {
 
 
 
-// function Option_A() {
-
-//     var Option_1_var = document.getElementById("Deposit_1");
-//     Option_state[0] = !Option_state[0];
-//     Deselect(Option_state[0]);
-//     Switcher(Option_state[0], Option_1_var, Option_price[0]);
-
-// }
-
-// function Option_B() {
-//     var Option_2_var = document.getElementById("Deposit_2");
-//     Option_state[1] = !Option_state[1];
-//     Deselect(Option_state[1]);
-//     Switcher(Option_state[1], Option_2_var, Option_price[1]);
-
-// }
-
-// function Option_C() {
-//     var Option_3_var = document.getElementById("Deposit_3");
-//     Option_state[2] = !Option_state[2];
-//     Deselect(Option_state[2]);
-//     Switcher(Option_state[2], Option_3_var, Option_price[1]);
-// }
-
-// function Option_D() {
-//     var Option_D_var = document.getElementById("Deposit_4");
-//     Option_D_state = !Option_D_state;
-//     Switcher(Option_D_state, Option_D_var, Option_D_price);
-// }
-// ////////////////////////////////////////////////////////////
-// function Switcher(OptionONNOFF, OptionDiv, OptionPrice) {
-//     if (OptionONNOFF == true) {
-
-//         price(OptionPrice);
-
-//         OptionDiv.style.outlineColor = "#07ad15";
-//         OptionONNOFF = true;
-//     } else {
-
-
-//         price(OptionPrice * (-1));
-//         OptionDiv.style.outlineColor = "#5207ad";
-//         OptionONNOFF = false;
-//     }
-// }
