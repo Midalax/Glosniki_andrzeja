@@ -308,7 +308,6 @@ h2
   margin-left: 100px;
   color: rgb(255, 255, 255);
   height: 80vh;
-  /* background-color: rgba(45, 45, 45, 0.316); */
   width: 90%;
   border-top: 10px solid rgb(82, 7, 173);
   
@@ -322,8 +321,7 @@ h2
   width: 22%;
   height: 70vh;
   float:left;
-  outline: 8px solid rgb(82, 7, 173);
-  
+  border-bottom: 10px solid rgb(82, 7, 173);
 }
 
 
@@ -367,12 +365,12 @@ h2
 #price
 {
   cursor: pointer;
-  padding-left: 50px;
-  width: 90%;
+  width: 50%;
   height:70px;
   margin-left: auto;
   margin-right: auto;
-  outline: 8px solid rgb(82, 7, 173);
+  border-bottom: 10px solid rgb(82, 7, 173);
+  background-color: rgba(0, 0, 0, 0.643);
   color: white;
   font-size: 20px;
   text-align: justify;
@@ -385,7 +383,7 @@ h2
   letter-spacing: 5px;
   font-family: 'Archivo', sans-serif;
   font-weight: 200;
-  line-height: 50px;
+  line-height: 70px;
   text-align: center;
 }
 
@@ -465,21 +463,7 @@ h2
   font-weight: 200;
 }
 
-table
-{
-  font-family: 'Archivo', sans-serif;
-}
-.cennik {
-  margin-top: 50px;
-  font-size: 2vw;
-  text-align: left;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  color: rgb(255, 255, 255);
-  border:4px solid rgb(82, 7, 173);
-  padding: 30px;
-}
+
 #th_1{
   padding-left: 25%;
   text-align: left;

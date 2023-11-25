@@ -48,10 +48,10 @@ function Supplement_C() {
 
 
 function Deselect(Except, price_except) {
-    document.getElementById("Deposit_1").style.outlineColor = "#5207ad";
-    document.getElementById("Deposit_2").style.outlineColor = "#5207ad";
-    document.getElementById("Deposit_3").style.outlineColor = "#5207ad";
-    document.getElementById("Deposit_4").style.outlineColor = "#5207ad";
+    document.getElementById("Deposit_1").style.borderColor = "#5207ad";
+    document.getElementById("Deposit_2").style.borderColor = "#5207ad";
+    document.getElementById("Deposit_3").style.borderColor = "#5207ad";
+    document.getElementById("Deposit_4").style.borderColor = "#5207ad";
     
     for (let i = 0; i <= 3; i++)
     {
@@ -64,7 +64,7 @@ function Deselect(Except, price_except) {
 
 function Select(Option_to_select)
 {
-    Option_to_select.style.outlineColor = "#07ad15";
+    Option_to_select.style.borderColor = "#07ad15";
     console.log(Option_state);
    
 }
@@ -136,10 +136,6 @@ function price(OptionalPrice) {
     price_sum = price_now;
 
     currentprice.innerHTML = "Cena = " + price_sum + "zł";
-
-
-
-
 }
 
 
