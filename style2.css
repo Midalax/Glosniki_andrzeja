@@ -2,7 +2,9 @@
 html
 {
   scroll-behavior: smooth;
+ 
 }
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -52,11 +54,11 @@ html
 
 body
 {
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(193, 35, 35);
   padding: 0;
   margin: 0;
   background-image: url('images/Background.jpg');
-  background-color: #0e0e0e;
+  background-color: #ed0909;
 }
 
 
@@ -71,77 +73,38 @@ header
   align-self:auto;
 }
 
-.fa-sharp
-{
-  color: rgb(131, 67, 188);
-  word-spacing: 10px;
-}
 
-.Language
-{
 
-  background-color: rgb(255, 255, 255);
-  width: 900px;
-  clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
-  color: rgb(0, 0, 0);
-  position:absolute;
-  float: inline-end;
- margin-bottom: 50px;
- padding-bottom: 50px;
-  width: 200px;
-  padding-top: 42.5px;
- 
- text-align: center;
 
- font-size: 22px;
-
-}
 #Header
 {
-
+  
 background-color: rgb(7, 173, 10);
-width: 99vw;
+width: 50%;
 height: 120px;
 z-index: 5;
-clip-path: polygon(0 0, 95% 0, 100% 100%, 100px 100%);
+display: no;
 margin: 0px;
+margin-left: auto;
+margin-right: auto;
 padding: 0px;
   
 
 }
 
 
-#Logo_back
-{
-background-color:  rgb(43, 27, 148);
-width: 99vw;
-height: 100px;
-clip-path: polygon(0 0, 94.3% 0, 99% 92%, 90px 91%);
-padding: 0px;
-margin: 0px;
-float: inherit;
-}
-
 #Logo_Shadow
 {
-    width: 500px;
-    height: 110px;
-    background-color:  rgb(60, 161, 32);
-    clip-path: polygon(0px 0px, 400px 0, 100% 100%, 0% 100%);
-    padding: 0px;
+    width: 100%;
+    height: 150px;
+    background-color:  rgb(240, 9, 236);
+    margin-left: auto;
+  margin-right: auto;
     text-align: center; 
-    margin: 0px;
-   
-    
+    margin: 0px;   
 }
 
-#Logo_Shadow
-{
-  background-color: rgb(166, 16, 16);
-  width: 500px;
-  margin: 0px;
-}
- 
+
  #placeholder
  {
   width: 500px;
@@ -161,86 +124,7 @@ float: inherit;
 
 .Equipment, .Acces, .Pricing, .Contact{
   display: none;
-  position:absolute;
-  z-index: 500;
-  float: inline-end;
- margin-bottom: 50px;
- padding-bottom: 50px;
-  width: 200px;
-  padding-top: 42.5px;
- text-align: center;
- color: white;
- font-size: 22px;
- font-family: 'Gabarito', sans-serif;
 }
-
-.Equipment
-{
-  display: none;
-margin-left: 580px;
-}
-
-.Acces
-{display: none;
-margin-left: 850px;
-}
-
-.Pricing
-{
-margin-left: 1120px;
-}
-.Contact
-{
-margin-left: 1390px;
-}
-.Language
-{
-  margin-left: 86%;
-  
-  color: #0e0e0e;
-}
-
-.Equipment::before, .Acces::before, .Pricing::before, .Contact::before,.Language::before{
-  content: "";
-  position:absolute;
-  margin-top: 30px;
-  width: 0;
-  height: 5px; /* Grubość kreski */
-  background-color: rgb(82, 7, 173); /* Kolor kreski */
-  bottom: 150;
-  left: 50;
-  transition: width 0.5s; /* Dodanie animacji do kreski */
-}
-
-/* Styl po najechaniu na hiperłącze */
-.Acces:hover::before {
- 
-  background-color: rgb(82, 7, 173);
-}
-.Equipment:hover::before
-{
-  width: 79%;
-}
-.Acces:hover::before
-{
-  width: 65%;
-}
-.Pricing:hover::before
-{
-  width: 44%;
-}
-.Contact:hover::before
-{
-  width: 54%;
-}
-.Language:hover::before
-{
-  width: 25%;
-}
-
-
-
-
 
 
 #Baner
