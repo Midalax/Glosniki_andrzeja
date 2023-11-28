@@ -2,29 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #000000;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(115, 42, 179);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #c9c8c8;
-}
-
-
-
-
 #Deposit_a {
 
   scroll-margin-top: 100px;
@@ -88,7 +65,7 @@ header {
 #Header {
   display: none;
   background-color: rgb(99, 73, 131);
-  width: 80vw;
+  width: 70vw;
   height: 120px;
   z-index: 5;
   margin: 0px;
@@ -153,7 +130,6 @@ header {
   float: inline-end;
   margin-bottom: 50px;
   padding-bottom: 50px;
-  width: 200px;
   padding-top: 42.5px;
   text-align: center;
   color: white;
@@ -201,15 +177,15 @@ header {
 
   margin-left: auto;
   margin-right: auto;
-  width: 100vw;
+  width: 100%;
   color: rgb(255, 255, 255);
-  height: 50vh;
+  height: 900px;
   background-color: rgb(45, 45, 45);
   border-top: 10px solid rgb(82, 7, 173);
   border-bottom: 10px solid rgb(82, 7, 173);
   background-image: url('images/DJ.jpg');
   background-size: 110vh;
-  background-repeat: none;
+  background-repeat:repeat;
   background-blend-mode: overlay;
 
 }
@@ -217,7 +193,7 @@ header {
 #Baner_text {
   margin-left: auto;
   margin-right: auto;
-  width: 70vw;
+  width: 700px;
   height: 90%;
   padding-top: 50px;
   text-align: center;
@@ -229,7 +205,8 @@ header {
   position: fixed;
   margin-left: auto;
   margin-right: auto;
-  width: 50vw;
+  width: auto;
+  height:500px;
 }
 
 
@@ -258,27 +235,7 @@ h2 {
   text-align: justify;
 }
 
-#Deposit,
-#Deposit_5 {
-  
-  margin-top: 50px;
-  color: rgb(255, 255, 255);
-  background-color: aquamarine;
-  height: 245vh;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border-top: 10px solid rgb(82, 7, 173);
-  justify-content: center;
-  align-items: center;
-  
-}
 
-#Deposit_5 {
-  background-color: rgba(50, 104, 59, 0.643);
-  height: 55vh;
-
-}
 
 
 
@@ -289,20 +246,52 @@ h2 {
 
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(99, 50, 104, 0.643);
   width: 100%;
-  height: 60vh;
+  height: 24.5%;
 
 }
 
+#Deposit {
 
+  margin-top: 50px;
+  color: rgb(255, 255, 255);
+  height: 5000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 10px solid rgb(82, 7, 173);
+  justify-content: center;
+  align-items: center;
+
+}
+.Deposit_title {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 7.3vw;
+  font-family: 'Gabarito', sans-serif;
+  font-weight: 500;
+}
+
+.Deposit_TXT {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  font-size: 50px;
+  text-align: justify;
+  font-family: 'Archivo', sans-serif;
+  line-height: 50px;
+}
 
 
 
 #Accessories_box {
   float: inherit;
-  width: 86%;
-  height: 20vh;
+  width: 80%;
+  height: 500px;
   padding-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
@@ -314,41 +303,35 @@ h2 {
 #Accessories3 {
   user-select: none;
   cursor: pointer;
-
-  margin-left: auto;
-  margin-right: auto;
+  height: 24%;
   outline: 8px solid rgb(82, 7, 173);
-
-  text-align: justify;
+  font-size: 70px;
+  display: grid;
+  place-items: center;
   font-family: 'Archivo', sans-serif;
 
-  letter-spacing: 5px;
-  font-family: 'Archivo', sans-serif;
-  font-weight: 200;
-  line-height: 50px;
-  text-align: center;
+
+
 
 }
 
 #price {
   cursor: pointer;
-  width: 50%;
-  height: 70px;
+  width: 80%;
+  height: 150px;
   margin-left: auto;
   margin-right: auto;
   border-bottom: 10px solid rgb(82, 7, 173);
   background-color: rgba(77, 91, 105, 0.643);
   color: white;
-  font-size: 20px;
+  font-size: 70px;
   text-align: justify;
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Gabarito', sans-serif;
   line-height: 30px;
   margin-top: 50px;
   margin-bottom: 50px;
   z-index: 50;
-  font-size: 30px;
   letter-spacing: 5px;
-  font-family: 'Archivo', sans-serif;
   font-weight: 200;
   line-height: 70px;
   text-align: center;
@@ -364,54 +347,27 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2%;
-  background-color: rgba(148, 169, 62, 0.359);
-  max-width: 99%;
+  
+  width: 100%;
   height: auto;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
 #Speaker_img {
-
-  padding-left: auto;
-  padding-right: auto;
-  width: 30%;
+width: auto;
+height:500px;
 
 }
 
-.Deposit_title {
-  margin-bottom: 20px;
-  margin-top: 40px;
-  text-align: center;
-  font-size: 7.3vw;
-  font-family: 'Gabarito', sans-serif;
-  font-weight: 500;
-}
 
-.Deposit_TXT {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  justify-content: center;
-  align-items: center;
-  height: 30vh;
-  font-size: 2.4vh;
-  text-align: justify;
-  font-family: 'Archivo', sans-serif;
-  line-height: 60px;
-
-}
 
 
 #Acces_IMG {
-
-
-  /* background-color: rgba(45, 45, 45, 0.316); */
   width: 100%;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-
   justify-content: center;
   align-items: center;
 }
@@ -423,21 +379,30 @@ h2 {
 }
 
 #Acces_TXT {
-  clear: both;
-  background-color: rgba(118, 103, 185, 0.329);
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 25vh;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 2vh;
-  
+
+  width: 90%;
+  height: 43%;
+  font-size: 40px;
   text-align: justify;
   font-family: 'Archivo', sans-serif;
   font-weight: 200;
 }
 
+
+
+
+#Acces_main {
+  margin-top: 50px;
+  color: rgb(255, 255, 255);
+  height: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 10px solid rgb(82, 7, 173);
+  justify-content: center;
+  align-items: center;
+
+}
 
 #th_1 {
   padding-left: 25%;
@@ -450,7 +415,7 @@ td {
 }
 
 #Contact {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Gabarito', sans-serif;
   margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -459,7 +424,7 @@ td {
   /* background-color: rgba(45, 45, 45, 0.316); */
   width: 90%;
   border-top: 10px solid rgb(82, 7, 173);
-
+margin-bottom: 70px;
   letter-spacing: 4px;
 }
 
@@ -468,12 +433,12 @@ td {
   margin-top: 10px;
   padding-top: 30px;
   text-align: center;
-  font-size: 30px;
+  font-size: 60px;
 }
 
 .Title {
   text-align: center;
-  margin-left: 50px;
+  font-size: 90px;
   color: rgb(255, 255, 255);
 }
 
