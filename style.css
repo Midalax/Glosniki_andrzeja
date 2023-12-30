@@ -69,24 +69,7 @@ header {
   word-spacing: 10px;
 }
 
-.Language {
 
-  background-color: rgb(255, 255, 255);
-  width: 900px;
-  clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
-  color: rgb(0, 0, 0);
-  position: absolute;
-  float: inline-end;
-  margin-bottom: 50px;
-  padding-bottom: 50px;
-  width: 200px;
-  padding-top: 42.5px;
-
-  text-align: center;
-
-  font-size: 22px;
-
-}
 
 #Header {
 
@@ -105,7 +88,7 @@ header {
 
 #Logo_back {
   background-color: rgb(11, 11, 11);
-  width: 99vw;
+  width: 90vw;
   height: 120px;
   clip-path: polygon(0 0, 94.3% 0, 99% 92%, 90px 91%);
   padding: 0px;
@@ -147,42 +130,104 @@ header {
 .Equipment,
 .Acces,
 .Pricing,
-.Contact,
-.Language {
+.Contact {
   position: absolute;
   z-index: 500;
   float: inline-end;
   margin-bottom: 50px;
   padding-bottom: 50px;
-  width: 15vw;
+  width: 200px;
   padding-top: 42.5px;
   text-align: center;
   color: white;
-  background-color: aqua;
+
   font-size: 22px;
   float: left;
   font-family: 'Gabarito', sans-serif;
 }
 
-.Equipment {
+@media (min-width: 1000px) and (max-width: 1280px) {
+  .Equipment {
 
-  margin-left: 580px;
+    margin-left: 500px;
+   
+
+  }
+
+  .Acces {
+    margin-left: 680px;
+  }
+
+
+  .Contact {
+    margin-left: 860px;
+  }
+
+
+
+
 }
 
-.Acces {
-  margin-left: 850px;
+
+
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .Equipment {
+    
+    margin-left: 500px;
+  }
+
+  .Acces {
+    margin-left: 750px;
+  }
+
+
+  .Contact {
+    margin-left: 1000px;
+  }
 }
 
+@media (min-width: 1400px) and (max-width: 1919px) {
 
-.Contact {
-  margin-left: 1000px;
+  
+  .Equipment {
+    
+    margin-left: 500px;
+  }
+
+  .Acces {
+    margin-left: 800px;
+  }
+
+
+  .Contact {
+    margin-left: 1100px;
+  }
+
+
+
+
 }
+@media (min-width: 1910px) {
 
-.Language {
+  
+  .Equipment {
+    
+    margin-left: 30vw;
+  }
 
-  color: #0e0e0e;
+  .Acces {
+    margin-left: 51vw;
+  }
+
+
+  .Contact {
+    margin-left: 70vw;
+  }
+
+
+
+
 }
-
 .Equipment::before,
 .Acces::before,
 .Pricing::before,
@@ -201,20 +246,6 @@ header {
   transition: width 0.5s;
   /* Dodanie animacji do kreski */
 }
-
-#Menu_box
-{
-width: 60%;
-float: right;
-margin-right: 10vh;
-
-height: 200px;
-background-color: cornflowerblue;
-
-}
-
-
-
 
 /* Styl po najechaniu na hiperłącze */
 .Acces:hover::before {
@@ -247,14 +278,16 @@ background-color: cornflowerblue;
 
 #Baner {
 
-  margin-top: 8%;
+  margin-top: 1%;
 
 
 
-  width: 100%;
-  color: rgb(255, 255, 255);
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgb(216, 216, 216);
   height: 900px;
-  background-color: rgb(45, 45, 45);
+  background-color: rgb(20, 20, 20);
   border-top: 10px solid rgb(82, 7, 173);
   border-bottom: 10px solid rgb(82, 7, 173);
   background-image: url('images/DJ.jpg');
@@ -277,7 +310,7 @@ background-color: cornflowerblue;
   position: fixed;
   margin-left: auto;
   margin-right: auto;
-  width: 70vw;
+  width: 50vw;
 }
 
 
@@ -306,11 +339,11 @@ h2 {
   text-align: justify;
 }
 
-#Deposit {
+#Deposit, #Acces_main {
   margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
-  background-color: aqua;
+  
   color: rgb(255, 255, 255);
   height: 880px;
   width: 90%;
@@ -455,10 +488,10 @@ h2 {
 #Acces_TXT {
 
   margin-left: 2.5%;
-  margin-top: 2%;
-
+  margin-top: 5%;
+  background-color: aquamarine;
   width: 32%;
-  height: 460px;
+  height: 630px;
   float: left;
   font-size: 20px;
   text-align: justify;
@@ -487,7 +520,7 @@ td {
   /* background-color: rgba(45, 45, 45, 0.316); */
   width: 90%;
   border-top: 10px solid rgb(82, 7, 173);
-
+  background-color: hotpink;
   letter-spacing: 5px;
 }
 
