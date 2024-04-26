@@ -3,11 +3,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="Main" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>KORPAND - Głośniki</title>
 
   <script src="Scripts.js"></script>
+  <script src="Map_script.js"></script>
+  <script src="Map_style.json"></script>
   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 
   <link rel="stylesheet" href="style.css">
@@ -29,96 +34,101 @@
 
 <body>
 
-  <header ><!--Menu -->
-    <div id="Header"><!--górna stopka-->
-      
-      
+  <header>
+    <!--Menu -->
+    <div id="Header">
+      <!--górna stopka-->
+
+
       <div id="Logo_back">
-        
+
         <a href="#Deposit_a">
           <div class="Equipment">
             WYPOSAŻENIE
           </div>
         </a>
-    
+
         <a href="#Acces" class="Hyperlink_menu">
           <div class="Acces">
-        TRANSPORT
+            TRANSPORT
           </div>
         </a>
-    
+
         <a href="#Contact">
           <div class="Contact">
             KONTAKT
-            </div>
+          </div>
         </a>
- 
-    
-    
-    
+
+
+
+
         <!-- <a href="https://www.example.com">
           <div class="Language">
             ENG 
             <i class="fa-sharp fa-solid fa-language"></i>
             </div>
         </a> -->
-    
-     
-    
-       <a href="#top"><div id="Logo_Shadow">   
-    
-          <div id="Logo_SVG">
-    
-      <img alt="Logo firmy" src="images/Korpand_logo.svg"/>
-      
-          </div>
+
+
+
+        <a href="#top" aria-label="Korpand logo">
+          <div id="Logo_Shadow">
+
+            <div id="Logo_SVG">
+
+              <img alt="Logo firmy" src="images/Korpand_logo.svg" />
+
+            </div>
         </a>
-      
-   
-    
-      
-    
-    
-    
+
+
+
+
+
+
+
       </div>
-    
-    
-      </div>
-      
-    
-    
-       
+
+
     </div>
-    </header>
 
-  
-  
 
+
+
+    </div>
+
+
+
+
+  </header>
 
 
 
   <div id="Baner">
 
-  
+
     <a id="top"></a>
     <div id="Baner_text">
-      
-      <h1>Korpand</h1>
+
+      <h1>Wynajem głośników</br> "Korpand"</h1>
 
       <hr id="Banner_line">
-      <h2> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Turpis egestas pretium aenean pharetra magna. Consequat ac felis donec et odio
-        pellentesque"</h2>
-        <br>
-      <a href="https://www.instagram.com/" target="_blank">
-        <div class="Socials">
+      <h2> Zajmujemy się wynajmem sprzętu na imprezy i konferencję
+        w ofercie znajdują się głośniki-mikrofony-oświetlenie-maszyny do dymu
+        zapewniamy pełną obsługę sprzętu wraz z transportem
+
+      </h2>
+      <br>
+      <a href="https://www.instagram.com/" target="noopener">
+        <div class="Socials1">
           <i class="fa-brands fa-instagram"></i><br>
           /korpand
         </div>
-        
+
       </a>
-      <a href="https://www.facebook.com/" target="_blank">
-        <div class="Socials" style="float: right;">
+      <a href="https://www.facebook.com/" target="noopener">
+        <div class="Socials2">
           <i class="fa-brands fa-square-facebook"></i><br>
           Facebook
         </div>
@@ -129,7 +139,7 @@
 
 
   </div>
-  
+
   <p class="Title">Wyposażenie</p>
 
   <a id="Deposit_a"></a>
@@ -137,68 +147,76 @@
   <div id="Deposit">
 
     <div id="Deposit_1" onclick="Option_A()">
-      <p class="Deposit_title">Zestaw 1</p>
+      <p class="Deposit_title">Podstawowy</p>
       <div class="Deposit_IMG">
-        <img id="Speaker_img" src="images/speaker.png" />
+        <img alt="Speaker image" id="Speaker_img" src="images/speaker.png" />
       </div>
       <div class="Deposit_TXT">
+        <br>
+        <ul>
+          <li>2x Kolumny aktywne o mocy 200W (2x100W)
+            <br>
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        <br><br>Massa massa ultricies mi quis hendrerit. At risus viverra adipiscing at in tellus integer feugiat
-        scelerisque. Euismod elementum nisi quis eleifend quam adipiscing vitae proin.
+          <li>Stelaż do montażu głośników (zakres regulacji 50-150 cm)
+            <br>
+
+          <li>Mixer
+
+            <b>
+          <li>Darmowy transport do 10 KM</b><br><br><br>
+            Cena: 300 zł
+
+        </ul>
 
 
       </div>
     </div>
 
     <div id="Deposit_2" onclick="Option_B()">
-      <p class="Deposit_title">Zestaw 2</p>
+      <p class="Deposit_title">Rozszerzony</p>
       <div class="Deposit_IMG">
-        <img id="Speaker_img" src="images/speaker.png" />
+        <img alt="" id="Speaker_img" src="images/speakers_2.png" />
       </div>
       <div class="Deposit_TXT">
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        <br><br>Massa massa ultricies mi quis hendrerit. At risus viverra adipiscing at in tellus integer feugiat
-        scelerisque. Euismod elementum nisi quis eleifend quam adipiscing vitae proin.
+        <br>
+        <ul>
+          <li>2x Kolumny aktywne o mocy 200W (2x100W)<br>
+          <li>Stelaż do montażu głośników (zakres regulacji 50-150 cm)<br>
+          <li>Mixer<br>
+          <li>2x Belki oświetleniowe<br>
+
+            <b>
+          <li>Darmowy transport do 15 KM</b><br><br>
+            Cena: 400 zł
+        </ul>
 
 
       </div>
     </div>
 
     <div id="Deposit_3" onclick="Option_C()">
-      <p class="Deposit_title">Zestaw 3</p>
+      <p class="Deposit_title">Pełny</p>
       <div class="Deposit_IMG">
-        <img id="Speaker_img" src="images/speaker.png" />
+        <img alt="" id="Speaker_img" src="images/speakers_3.png" />
       </div>
       <div class="Deposit_TXT">
+        <br>
+        <ul>
+          <li>2x Kolumna aktywna o mocy 200W (2x100W)<br>
+          <li>2x Belki oświetleniowe <br>
+          <li>Stelaż do montażu głośników (zakres regulacji 50-150 cm)<br>
+          <li>Maszyna do dymu<br>
+          <b> <li>Darmowy transport do 20 KM</b><br><br>
+            Cena: 450 zł
+        </ul>
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        <br><br>Massa massa ultricies mi quis hendrerit. At risus viverra adipiscing at in tellus integer feugiat
-        scelerisque. Euismod elementum nisi quis eleifend quam adipiscing vitae proin.
 
 
       </div>
     </div>
 
-    <div id="Deposit_4" onclick="Option_D()">
-      <p class="Deposit_title">Zestaw 4</p>
-      <div class="Deposit_IMG">
-        <img id="Speaker_img" src="images/speaker.png" />
-      </div>
-      <div class="Deposit_TXT">
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua.
-        <br><br>Massa massa ultricies mi quis hendrerit. At risus viverra adipiscing at in tellus integer feugiat
-        scelerisque. Euismod elementum nisi quis eleifend quam adipiscing vitae proin.
-
-
-      </div>
-    </div>
 
 
 
@@ -209,54 +227,94 @@
 
   <div id="Accessories_box">
     <div id="Accessories" onclick="Supplement_A()">
-      Dodatek 1
+      + Mikrofon przewodowy
     </div>
     <div id="Accessories2" onclick="Supplement_B()">
-      Dodatek 2
+      + Mikrofon bezprzewodowy
     </div>
     <div id="Accessories3" onclick="Supplement_C()">
-      Dodatek 3
+      + Dodatkowy płyn do dymiarki
     </div>
 
 
 
   </div>
 
-  <div id="price"><p style="color: rgb(195, 195, 195); font-size: 40px;">Kliknij wybrany zestaw</p></div>
+  <div id="price">Kliknij wybrany zestaw</p>
+  </div>
+
+  <div id="disclaimer"><i></i>
+    <b>Aby skomponować własny zestaw prosimu o kontakt telefowniczny</b><br><br>
+
+    Informujemy, że wszystkie oferowane przez nas zestawy zawierają wliczone w cenę niezbędne okablowanie oraz akcesoria
+    umożliwiające pełne korzystanie z danego sprzętu. <br><br><br>
+
+    Montaż i demontaż mogą być przeprowadzone jedynie przez pracowników Korpand i są one wliczone w cenę każdego
+    zestawu.
 
 
+  </div>
+
+
+  
   <br>
   <p class="Title">Transport</p>
   <a id="Acces"></a>
 
   <div id="Acces_main">
+    <div id="map"></div>
 
-    <div id="Acces_IMG">
-      <img id="Map" src="images/map.jpeg" />
+    <!-- Kontener dla informacji o trasie -->
+    <div id="route-info">
+        <label for="destination">Adres docelowy:</label>
+        <input type="text" id="destination" placeholder="Wprowadź adres dostawy" >
+        <div id="suggestions"></div>
+        <button id="find_route" onclick="findRoute()">Znajdź trasę</button>
+        <button onclick="window.location.reload()">Resetuj</button>
+        <p id="distance"></p>
     </div>
 
-    <div id="Acces_TXT">
+    <script>
+        
+    </script>
+
+    <!-- Skrypt do ładowania API Google Maps --> 
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTONDAAZ0Qsip2UyGvPuoSnx6dSNrnWVo&callback=initMap&libraries=places">
+
+      // Dodanie znacznika na mapie (początkowego)
+      var marker = new google.maps.AdvancedMarkerElement ({
+        position: { lat: 50.09737246885462, lng: 20.070681341066955  }, // Ustawienie pozycji na centrum mapy
+        map: map // Określenie, na której mapie ma być umieszczony znacznik
+      });
+
+
+    </script>
+
+
+
+
+    </div> 
+
+    <!-- <div id="Acces_TXT">
       <p class="Deposit_title">Dostępność</p><br>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua.
-      <br><br>Massa massa ultricies mi quis hendrerit. At risus viverra adipiscing at in tellus integer feugiat
-      scelerisque. Euismod elementum nisi quis eleifend quam adipiscing vitae proin.
+      Opłata za transport jest kalkulowana na podstawie dystansu od siedziby firmy, gdzie każdy dodatkowy kilometr po przekroczeniu ustalonej granicy (zawarej w każdym z zestawów) to koszt w wysokości 3 zł. 
 
     </div>
   </div>
 
 
-  
+
   <a id="Contact"></a>
   <p class="Title">Kontakt</p>
   <div id="Contact">
 
     <p class="contact_txt">Telefon: 4156456456</p>
     <p class="contact_txt">Email: 4156456456</p>
-    <p class="contact_txt">GG: 4156456456</p>
+    <p class="contact_txt">GG: 4156456456</p> -->
 
 
-
+    
 
 </body>
 

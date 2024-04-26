@@ -1,7 +1,12 @@
 html {
   scroll-behavior: smooth;
 }
-
+body
+{
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -23,7 +28,14 @@ html {
 }
 
 
-
+li{
+  list-style: square inside;
+  text-align: center;
+}
+li::marker
+{
+  color: rgb(115, 42, 179);;
+}
 
 #Deposit_a {
 
@@ -43,11 +55,14 @@ html {
 }
 
 body {
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(3, 3, 3);
   padding: 0px;
-  margin-left: 0px;
-  background-image: url('images/Background.jpg');
-  background-color: #0e0e0e;
+ 
+  
+  background-image: url('images/background_logo.svg');
+
+ 
+  background-size: 200px;
 }
 
 
@@ -55,6 +70,7 @@ body {
 
 
 header {
+  
   position: sticky;
   top: 0;
   position: sticky;
@@ -339,27 +355,36 @@ h2 {
   text-align: justify;
 }
 
-#Deposit, #Acces_main {
+#Deposit {
   margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
   
   color: rgb(255, 255, 255);
-  height: 880px;
+  height: 1000px;
   width: 90%;
   border-top: 10px solid rgb(82, 7, 173);
 
 }
-
+#Acces_main
+{
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: aqua;
+  color: rgb(255, 255, 255);
+  height: 300px;
+  width: 90%;
+  border-top: 10px solid rgb(82, 7, 173);
+}
 #Deposit_1,
 #Deposit_2,
 #Deposit_3,
 #Deposit_4 {
   margin-left: 2.5%;
 
-  background-color: rgba(0, 0, 0, 0.643);
-  width: 22%;
-  height: 90%;
+  background-color: rgba(0, 0, 0, 0.64);
+  width: 30%;
   float: left;
   border-bottom: 10px solid rgb(82, 7, 173);
 }
@@ -371,6 +396,20 @@ h2 {
   font-size: 50px;
   font-family: 'Gabarito', sans-serif;
   font-weight: 500;
+  /* background-color: coral; */
+}
+
+#disclaimer
+{
+  color: rgba(255, 255, 255, 0.727);
+  text-align: center;
+  line-height: 25px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height:100px;
+  font-size: 25px;
+  font-family: 'Archivo', sans-serif;
 }
 
 .Deposit_TXT {
@@ -378,12 +417,13 @@ h2 {
   margin-right: auto;
   margin-top: 20px;
   width: 95%;
-  height: 360px;
-  font-size: 20px;
+  height: 500px;
+  font-size: 22px;
   text-align: justify;
   font-family: 'Archivo', sans-serif;
   line-height: 2.5vw;
-
+  
+  padding: 5px;
 }
 
 #Accessories_box {
@@ -400,9 +440,9 @@ h2 {
 #Accessories,
 #Accessories2,
 #Accessories3 {
-  user-select: none;
+  
   cursor: pointer;
-  padding-left: 50px;
+
   width: 90%;
   margin-left: auto;
   margin-right: auto;
@@ -449,19 +489,23 @@ h2 {
 }
 
 .Deposit_IMG {
-  margin-left: 2.5%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 2%;
   /* background-color: rgb(0, 255, 38); */
   width: 95%;
-  height: 180px;
+
   margin-bottom: 10px;
   margin-top: 10px;
+  /* background-color: crimson; */
+  text-align: center;
 }
 
 #Speaker_img {
 
-  padding-left: 25%;
-  width: 50%;
+  /* background-color: aqua; */
+  text-align: center;
+  width: 65%;
 
 }
 
@@ -469,34 +513,31 @@ h2 {
 
 
 #Acces_IMG {
-  margin-left: 2.5%;
-  margin-top: 2%;
-  /* background-color: rgba(45, 45, 45, 0.316); */
+  margin-left: auto;
+  margin-top: auto;
+  /* background-color: aqua; */
   width: 60%;
-  height: 70vh;
+  height: 50vh;
   float: left;
 
+
 }
 
-#Map {
-  width: 90%;
-  padding-top: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
-}
+
 
 #Acces_TXT {
 
   margin-left: 2.5%;
-  margin-top: 5%;
-  background-color: aquamarine;
+  margin-top: 2%;
+  /* background-color: rgb(66, 64, 62); */
   width: 32%;
-  height: 630px;
+  height: 440px;
   float: left;
-  font-size: 20px;
+  font-size: 25px;
   text-align: justify;
   font-family: 'Archivo', sans-serif;
   font-weight: 200;
+  line-height: 45px;
   color: aliceblue;
 }
 
@@ -517,10 +558,9 @@ td {
   margin-left: 100px;
   color: rgb(255, 255, 255);
   height: 40vh;
-  /* background-color: rgba(45, 45, 45, 0.316); */
+  background-color: rgba(45, 45, 45, 0.316);
   width: 90%;
   border-top: 10px solid rgb(82, 7, 173);
-  background-color: hotpink;
   letter-spacing: 5px;
 }
 
@@ -535,23 +575,114 @@ td {
 .Title {
   color: aliceblue;
   margin-bottom: 5px;
-
+  margin-top: 150px;
   text-align: center;
   font-size: 50px;
   font-family: 'Gabarito', sans-serif;
   font-weight: 500;
 }
 
-.Socials {
-  width: 200px;
-  height: 100px;
-  float: left;
-  color: #ffffffd1;
+.Socials1, .Socials2 {
+  
+
   font-family: 'Gabarito', sans-serif;
-  font-size: 30px;
+  font-size: 40px;
+  color: aliceblue;
 }
 
 .fa-instagram,
 .fa-square-facebook {
-  font-size: 70px;
+  font-size: 100px;
 }
+
+.Socials1
+{
+  float: left;
+  margin-left: 15%;
+}
+.Socials2
+{
+  float: right;
+  margin-right: 15%;
+}
+
+
+
+      /* Style dla kontenera mapy */
+      #map {
+          height: 400px;
+          width: 100%;
+          float: left;
+          margin-bottom: 20px;
+      }
+
+      /* Style dla kontenera informacji o trasie */
+      #route-info {
+          float: left;
+          width: 30%;
+          padding: 10px;
+          box-sizing: border-box;
+      }
+
+
+      #route-info
+      {
+        background-color: blue;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+      }
+
+#find_route
+{
+
+  width: 30%;
+  outline: 8px solid rgb(82, 7, 173);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-align: justify;
+  font-family: 'Archivo', sans-serif;
+  line-height: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  z-index: 50;
+  font-size: 30px;
+  letter-spacing: 5px;
+  font-weight: 200;
+  line-height: 50px;
+  text-align: center;
+  background-color: #000000;
+  font-family: 'Gabarito', sans-serif;
+}
+
+#find_route:hover
+{
+  background-color: #2a2a2a;
+}
+
+input {
+	font-size: 18px;
+	padding: 5px 10px;
+	width: 50%;
+	padding-left: 49px;
+	outline: none;
+	background: #0f0e0e;
+	color: #ffffff;
+	border: 5px solid #AB1F98;
+	border-radius: 5px;
+}
+input::placeholder {
+	color: #737373;
+}
+
+.svg_icon {
+	position: fixed;
+	left: 16px;
+	fill: #cecece;
+	width: 18px;
+	height: 18px;
+}
+#suggestions
+{}
+
+

@@ -1,3 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root
+{
+  --small-text: 20px;
+  --button-text-size: 25px;
+  --second-color:rgba(117, 11, 210, 0.81);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -21,11 +33,13 @@ html {
 
 body {
 
-  background-color: rgb(20, 20, 20);
-  padding: 0px;
-  margin: 0px;
-  background-image: url('images/Background.jpg');
-  background-color: #0e0e0e;
+
+  background-image: url('images/background_logo.svg');
+  background-repeat: initial;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #000000;
 }
 
 
@@ -36,6 +50,7 @@ header {
   position: sticky;
   z-index: 500;
   align-self: auto;
+  
 }
 
 .fa-sharp {
@@ -45,9 +60,9 @@ header {
 
 .Language {
   display: none;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(176, 10, 10);
 
-  clip-path: polygon(0 0, 60% 0, 100% 100%, 40% 100%);
+  
   color: rgb(0, 0, 0);
   position: absolute;
   float: inline-end;
@@ -62,59 +77,56 @@ header {
 
 }
 
-#Header {
-  display: none;
-  background-color: rgb(99, 73, 131);
-  width: 70vw;
-  height: 120px;
-  z-index: 5;
-  margin: 0px;
-  padding: 0px;
-  margin-left: auto;
-  margin-right: auto;
 
-
-}
 
 
 #Logo_back {
-  background-color: rgb(11, 11, 11);
-  width: 99vw;
-  height: 120px;
-  clip-path: polygon(0 0, 94.3% 0, 99% 92%, 90px 91%);
-  padding: 0px;
-  margin: 0px;
-  float: inherit;
+ 
+  width: 90vw;
+  height: 75px;
+  clip-path: polygon(11% 98%, 100% 100%, 100% 0, 2% 0);
+   
+  
 }
 
-#Logo_Shadow {
-  width: 500px;
-  height: 110px;
-  background-color: rgb(82, 7, 173);
-  clip-path: polygon(0px 0px, 400px 0, 100% 100%, 0% 100%);
-  padding: 0px;
-  text-align: center;
-  margin: 0px;
 
-
+#Header {
+  
+  clip-path: polygon(10% 100%, 90% 100%, 100% 0, 0 0);
+  height: 85px;
+  z-index: -5;
+  width: 90%;
+  
 }
-
 #Logo_Shadow {
   background-color: rgb(255, 255, 255);
-  width: 500px;
-  margin: 0px;
+  width: 100%;
+  height: 100%;
+ clip-path: none;
+   margin-left: auto;
+ margin-right: auto;
 }
 
 #placeholder {
   width: 500px;
+  
 }
 
 
 #Logo_SVG {
-  padding-top: 30px;
-  padding-left: 80px;
-  width: 60%;
-  height: 50%;
+  
+  padding-top:10px;
+  padding-left: 0px;
+  width: 230px;
+  height: 100%;
+ margin-left: auto;
+ margin-right: auto;
+ 
+ 
+ 
+
+
+  
 
 }
 
@@ -136,6 +148,7 @@ header {
   font-size: 22px;
   font-family: 'Gabarito', sans-serif;
   display: none;
+  
 }
 
 
@@ -143,7 +156,7 @@ header {
 /* Styl po najechaniu na hiperłącze */
 .Acces:hover::before {
 
-  background-color: rgb(82, 7, 173);
+  background-color: var(--second-color);
 }
 
 .Equipment:hover::before {
@@ -177,14 +190,14 @@ header {
 
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 90%;
   color: rgb(255, 255, 255);
-  height: 900px;
+  height: 750px;
   background-color: rgb(45, 45, 45);
-  border-top: 10px solid rgb(82, 7, 173);
-  border-bottom: 10px solid rgb(82, 7, 173);
+  border-top: 10px solid var(--second-color);
+  border-bottom: 10px solid var(--second-color);
   background-image: url('images/DJ.jpg');
-  background-size: 110vh;
+  background-size: 50vh;
   background-repeat:repeat;
   background-blend-mode: overlay;
 
@@ -193,8 +206,9 @@ header {
 #Baner_text {
   margin-left: auto;
   margin-right: auto;
-  width: 700px;
-  height: 90%;
+ 
+  width: 90%;
+  height: 750px;
   padding-top: 50px;
   text-align: center;
   align-items: center;
@@ -206,7 +220,7 @@ header {
   margin-left: auto;
   margin-right: auto;
   width: auto;
-  height:500px;
+  height:900px;
 }
 
 
@@ -219,7 +233,7 @@ header {
 
 h1 {
   letter-spacing: 10px;
-  font-size: 70px;
+  font-size: 60px;
   font-family: 'Gabarito', sans-serif;
 
 }
@@ -227,11 +241,11 @@ h1 {
 h2 {
   margin-top: 80px;
   z-index: 50;
-  font-size: 3.5vw;
-  letter-spacing: 5px;
+  font-size: 5vw;
+  letter-spacing: 3px;
   font-family: 'Archivo', sans-serif;
   font-weight: 200;
-  line-height: 50px;
+  line-height: 40px;
   text-align: justify;
 }
 
@@ -247,7 +261,7 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  height: 24.5%;
+  height: 25%;
 
 }
 
@@ -255,11 +269,11 @@ h2 {
 
   margin-top: 50px;
   color: rgb(255, 255, 255);
-  height: 5000px;
-  width: 100%;
+  height: 4500px;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
-  border-top: 10px solid rgb(82, 7, 173);
+  border-top: 10px solid var(--second-color);
   justify-content: center;
   align-items: center;
 
@@ -268,9 +282,11 @@ h2 {
   margin-bottom: 40px;
   margin-top: 40px;
   text-align: center;
-  font-size: 7.3vw;
+  font-size: 10vw;
   font-family: 'Gabarito', sans-serif;
   font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Deposit_TXT {
@@ -280,7 +296,7 @@ h2 {
   justify-content: center;
   align-items: center;
   height: 500px;
-  font-size: 50px;
+  font-size: var(--small-text);
   text-align: justify;
   font-family: 'Archivo', sans-serif;
   line-height: 50px;
@@ -301,11 +317,11 @@ h2 {
 #Accessories,
 #Accessories2,
 #Accessories3 {
-  user-select: none;
+  
   cursor: pointer;
   height: 24%;
-  outline: 8px solid rgb(82, 7, 173);
-  font-size: 70px;
+  outline: 8px solid var(--second-color);
+  font-size: var(--button-text-size);
   display: grid;
   place-items: center;
   font-family: 'Archivo', sans-serif;
@@ -321,11 +337,11 @@ h2 {
   height: 150px;
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 10px solid rgb(82, 7, 173);
+  border-bottom: 10px solid var(--second-color);
   background-color: rgba(77, 91, 105, 0.643);
   color: white;
-  font-size: 70px;
-  text-align: justify;
+  font-size: var(--button-text-size);
+  text-align: center;
   font-family: 'Gabarito', sans-serif;
   line-height: 30px;
   margin-top: 50px;
@@ -341,23 +357,27 @@ h2 {
 }
 
 .Deposit_IMG {
-  justify-content: center;
-  align-items: center;
-
   margin-left: auto;
   margin-right: auto;
   margin-top: 2%;
-  
-  width: 100%;
-  height: auto;
+  /* background-color: rgb(0, 255, 38); */
+  width: 95%;
+
   margin-bottom: 10px;
   margin-top: 10px;
+  background-color: crimson;
+  text-align: center;
+ 
 }
 
 #Speaker_img {
-width: auto;
-height:500px;
-
+  width: 65%;
+height: auto;
+background-color: blue;
+margin-left: auto;
+margin-right: auto;
+margin-top: auto;
+margin-bottom: auto;
 }
 
 
@@ -368,24 +388,26 @@ height:500px;
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
-  align-items: center;
+ 
+  
 }
 
 #Map {
   width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-}
+  align-self: center;
+} 
 
 #Acces_TXT {
 
-  width: 90%;
+  width: 100%;
   height: 43%;
-  font-size: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--small-text);
   text-align: justify;
   font-family: 'Archivo', sans-serif;
   font-weight: 200;
+  
 }
 
 
@@ -394,13 +416,12 @@ height:500px;
 #Acces_main {
   margin-top: 50px;
   color: rgb(255, 255, 255);
-  height: 1200px;
-  width: 100%;
+  height: 700px;
   margin-left: auto;
   margin-right: auto;
-  border-top: 10px solid rgb(82, 7, 173);
-  justify-content: center;
-  align-items: center;
+ 
+  border-top: 10px solid var(--second-color);
+
 
 }
 
@@ -414,6 +435,14 @@ td {
   height: 90px;
 }
 
+#Socials
+{
+  float: right;
+  text-align: left;
+  
+
+}
+
 #Contact {
   font-family: 'Gabarito', sans-serif;
   margin-top: 50px;
@@ -421,9 +450,9 @@ td {
   margin-right: auto;
   color: rgb(255, 255, 255);
   height: 15vh;
-  /* background-color: rgba(45, 45, 45, 0.316); */
+  background-color: rgb(167, 17, 17);
   width: 90%;
-  border-top: 10px solid rgb(82, 7, 173);
+  border-top: 10px solid var(--second-color);
 margin-bottom: 70px;
   letter-spacing: 4px;
 }
@@ -433,26 +462,39 @@ margin-bottom: 70px;
   margin-top: 10px;
   padding-top: 30px;
   text-align: center;
-  font-size: 60px;
+  font-size: 30px;
 }
 
 .Title {
+  color: aliceblue;
+  
+  margin-top: 30px;
   text-align: center;
-  font-size: 90px;
-  color: rgb(255, 255, 255);
+  font-size: 50px;
+  font-family: 'Gabarito', sans-serif;
+  font-weight: 500;
 }
 
-.Socials {
-  width: 300px;
-  height: 100px;
-  float: left;
-  color: #ffffffd1;
-  font-family: 'Gabarito', sans-serif;
-  font-size: 30px;
+.Socials1, .Socials2 {
+  
 
+  font-family: 'Gabarito', sans-serif;
+  font-size: 20px
+  
 }
 
 .fa-instagram,
 .fa-square-facebook {
-  font-size: 70px;
+  font-size: 40px;
+}
+
+.Socials1
+{
+  float: left;
+  margin-left: 8%;
+}
+.Socials2
+{
+  float: right;
+  margin-right: 8%;
 }

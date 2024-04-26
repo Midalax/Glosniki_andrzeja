@@ -4,23 +4,22 @@ var Supplement_A_state = false,
 
 var Option_state = [false, false, false, false];
 
-var Option_A_price = 100,
-    Option_B_price = 200,
-    Option_C_price = 500,
-    Option_D_price = 700;
+var color_selected = "#07ad15";
 
-var Supplement_A_price = 10,
-    Supplement_B_price = 20,
-    Supplement_C_price = 50;
+var color_base = "#5207ad";
+
+var Option_A_price = 300, //zestaw podstawowy
+    Option_B_price = 400, //zestaw rozrzeszony
+    Option_C_price = 450; //zestaw pełny
+
+var Supplement_A_price = 20, //mikrofon przewodowy
+    Supplement_B_price = 50, //mikrofon bezprzewodowy
+    Supplement_C_price = 10; //płyn do dymiarki
 
 
 var price_sum = 0;
 var price_now = 0;
 var Option_price_buffor = 0;
-
-
-
-
 
 function Supplement_A() {
     var Opt_a = document.getElementById("Accessories");
@@ -48,10 +47,10 @@ function Supplement_C() {
 
 
 function Deselect(Except, price_except) {
-    document.getElementById("Deposit_1").style.borderColor = "#5207ad";
-    document.getElementById("Deposit_2").style.borderColor = "#5207ad";
-    document.getElementById("Deposit_3").style.borderColor = "#5207ad";
-    document.getElementById("Deposit_4").style.borderColor = "#5207ad";
+    document.getElementById("Deposit_1").style.borderColor = color_base;
+    document.getElementById("Deposit_2").style.borderColor = color_base;
+    document.getElementById("Deposit_3").style.borderColor = color_base;
+    
     
     for (let i = 0; i <= 3; i++)
     {
@@ -64,7 +63,8 @@ function Deselect(Except, price_except) {
 
 function Select(Option_to_select)
 {
-    Option_to_select.style.borderColor = "#07ad15";
+    Option_to_select.style.borderColor = color_selected;
+    Option_to_select.style.backgroundColor = color_background_selected;
     console.log(Option_state);
    
 }
@@ -101,15 +101,7 @@ function Option_C() {
     price(Option_price_buffor);
 }
 
-function Option_D() {
-    Deselect();
-    var Option_D = document.getElementById("Deposit_4");
-    Option_state[3] = !Option_state[3];
-    Select(Option_D);
-    Option_price_buffor = Option_D_price;
-    price(Option_price_buffor);
 
-}
 
 ////////////////////////////////////////////////////////////
 function TrunONOFF(OptionONNOFF, OptionDiv, OptionPrice) {
@@ -125,9 +117,6 @@ function TrunONOFF(OptionONNOFF, OptionDiv, OptionPrice) {
     }
 
 }
-
-
-
 //////////////////////////////////////////////////////////////
 function price(OptionalPrice) {
     var currentprice = document.getElementById("price");
@@ -137,6 +126,3 @@ function price(OptionalPrice) {
 
     currentprice.innerHTML = "Cena = " + price_sum + "zł";
 }
-
-
-
