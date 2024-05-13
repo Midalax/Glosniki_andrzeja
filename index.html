@@ -259,27 +259,36 @@
   
   <br>
   <p class="Title">Transport</p>
-  <a id="Acces"></a>
+<a id="Acces"></a>
 
-  <div id="Acces_main">
+<div id="Acces_main">
+    <!-- Kontener dla mapy -->
     <div id="map"></div>
 
     <!-- Kontener dla informacji o trasie -->
     <div id="route-info">
-        <label for="destination">Adres docelowy:</label>
-        <input type="text" id="destination" placeholder="Wprowadź adres dostawy" >
+        
+        <input type="text" id="destination" placeholder="Wprowadź adres dostawy">
         <div id="suggestions"></div>
         <button id="find_route" onclick="findRoute()">Znajdź trasę</button>
-        <button onclick="window.location.reload()">Resetuj</button>
-        <p id="distance"></p>
+        <button id="restart" onclick="resetMap()"><i class="fa-solid fa-rotate-right"></i></button>
+       
     </div>
+    
+ <p id="distance">Długość trasy: 0 km</p><br>
+ <p id="Dist_price">Cena: 0 zł</p>
+    <div id="Acces_TXT">
+      <br>
+        Opłata za transport jest kalkulowana na podstawie dystansu od siedziby firmy, gdzie każdy dodatkowy kilometr po przekroczeniu ustalonej granicy (zawartej w każdym z zestawów) to koszt w wysokości 3 zł.
+    </div>
+</div>
 
     <script>
         
     </script>
 
     <!-- Skrypt do ładowania API Google Maps --> 
-    <script async defer
+    <script async defer!!!!!!!!!!!!!!!!!!!!
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTONDAAZ0Qsip2UyGvPuoSnx6dSNrnWVo&callback=initMap&libraries=places">
 
       // Dodanie znacznika na mapie (początkowego)
@@ -296,16 +305,11 @@
 
     </div> 
 
-    <!-- <div id="Acces_TXT">
-      <p class="Deposit_title">Dostępność</p><br>
-      Opłata za transport jest kalkulowana na podstawie dystansu od siedziby firmy, gdzie każdy dodatkowy kilometr po przekroczeniu ustalonej granicy (zawarej w każdym z zestawów) to koszt w wysokości 3 zł. 
-
-    </div>
-  </div>
+   
 
 
 
-  <a id="Contact"></a>
+  <!-- <a id="Contact"></a>
   <p class="Title">Kontakt</p>
   <div id="Contact">
 

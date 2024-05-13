@@ -12,10 +12,19 @@ var Option_A_price = 300, //zestaw podstawowy
     Option_B_price = 400, //zestaw rozrzeszony
     Option_C_price = 450; //zestaw pełny
 
+var Option_A_free = 10, //zestaw podstawowy
+    Option_B_free = 15, //zestaw rozrzeszony
+    Option_C_free = 20; //zestaw pełny
+
+var Option_A_km = 10, //zestaw podstawowy
+    Option_B_km = 15, //zestaw rozrzeszony
+    Option_C_km = 20; //zestaw pełny
+
 var Supplement_A_price = 20, //mikrofon przewodowy
     Supplement_B_price = 50, //mikrofon bezprzewodowy
     Supplement_C_price = 10; //płyn do dymiarki
 
+ var FreeKM=0;
 
 var price_sum = 0;
 var price_now = 0;
@@ -64,20 +73,21 @@ function Deselect(Except, price_except) {
 function Select(Option_to_select)
 {
     Option_to_select.style.borderColor = color_selected;
-    Option_to_select.style.backgroundColor = color_background_selected;
-    console.log(Option_state);
+    
+    console.log("wybieram");
    
 }
 
 function Option_A() {
 
-    
+    console.log("Działam Opcion A")
     var Option_A = document.getElementById("Deposit_1");
     Deselect(Option_state[0]);
     Option_state[0] = !Option_state[0];
     Select(Option_A, Option_A_price);
     Option_price_buffor = Option_A_price;
     price(Option_price_buffor);
+    FreeKM = Option_A_free;
     
 }
 
@@ -89,7 +99,7 @@ function Option_B() {
     Select(Option_B);
     Option_price_buffor = Option_B_price;
     price(Option_price_buffor);
-    
+    FreeKM = Option_B_free;
 }
 
 function Option_C() {
@@ -99,6 +109,7 @@ function Option_C() {
     Select(Option_C);
     Option_price_buffor = Option_C_price;
     price(Option_price_buffor);
+    FreeKM = Option_C_free;
 }
 
 
@@ -120,9 +131,10 @@ function TrunONOFF(OptionONNOFF, OptionDiv, OptionPrice) {
 //////////////////////////////////////////////////////////////
 function price(OptionalPrice) {
     var currentprice = document.getElementById("price");
-
+    console.log("LICZE")
     price_now = OptionalPrice + price_now;
+    console.log(price_now+"price now")
     price_sum = price_now;
-
+    console.log(price_sum+"price sum")
     currentprice.innerHTML = "Cena = " + price_sum + "zł";
 }
