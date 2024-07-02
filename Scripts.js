@@ -2,6 +2,7 @@ var Supplement_A_state = false,
     Supplement_B_state = false,
     Supplement_C_state = false;
 
+
 var Option_state = [false, false, false, false];
 
 var color_selected = "#07ad15";

@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  width: 85%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -57,13 +57,9 @@ li::marker {
 }
 
 body {
-  background-color: rgb(3, 3, 3);
+  background-color: rgb(0, 0, 0);
   padding: 0px;
-
-
   background-image: url('images/background_logo.svg');
-
-
   background-size: 200px;
 }
 
@@ -78,7 +74,7 @@ header {
   position: sticky;
   z-index: 500;
   align-self: auto;
-  margin-left: -20px;
+  margin-left: 70px;
   margin-right: auto;
   width: 90%;
 }
@@ -159,11 +155,11 @@ header {
   padding-top: 42.5px;
   text-align: center;
   color: white;
-
   font-size: 22px;
   float: left;
   font-family: 'Gabarito', sans-serif;
 }
+
 
 @media (min-width: 1000px) and (max-width: 1280px) {
   .Equipment {
@@ -299,31 +295,37 @@ header {
 
 #Baner {
 
-  margin-top: 1%;
-
-
-
-  width: 90%;
+  margin-top: -7%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   color: rgb(216, 216, 216);
-  height: 900px;
-  background-color: rgb(20, 20, 20);
-  border-top: 10px solid rgb(82, 7, 173);
+  height: 103vh;
+  min-height: 1100px;
+  max-height: 1500px;
+  background-color: #878787;
+  /* border-top: 10px solid rgb(82, 7, 173); */
   border-bottom: 10px solid rgb(82, 7, 173);
-  background-image: url('images/DJ.jpg');
-  background-size: 110vh;
-  background-repeat: repeat;
-  background-blend-mode: overlay;
+  background-image: url('images/Backgorund_movie.gif');
+  background-blend-mode: multiply;
+  background-size: cover;
+  /* Dopasowanie rozmiaru tła */
+  background-position: center;
+  /* Wyśrodkowanie tła */
+  background-repeat: no-repeat;
+  /* Nie powtarzaj tła */
+
 
 }
 
 #Baner_text {
   margin-left: auto;
   margin-right: auto;
-  width: 50vw;
+  width: 50%;
   height: 90%;
-  padding-top: 50px;
+  padding-top: 25vh;
+  padding-block-end: 300px;
+
   text-align: center;
 }
 
@@ -344,8 +346,12 @@ header {
 
 h1 {
   letter-spacing: 10px;
-  font-size: 70px;
-  font-family: 'Gabarito', sans-serif;
+  font-size: 60px;
+  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  color: #ffffff8d;
+
 
 }
 
@@ -354,24 +360,48 @@ h2 {
   z-index: 50;
   font-size: 30px;
   letter-spacing: 5px;
-  font-family: 'Archivo', sans-serif;
-  font-weight: 200;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
   line-height: 50px;
   text-align: justify;
 }
 
+h3 {
+  z-index: 50;
+  font-size: 28px;
+  letter-spacing: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 50px;
+
+}
+
+h4{
+  z-index: 50;
+  font-size: 12px;
+  letter-spacing: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  line-height: 20px;
+}
+
 #Deposit {
-  margin-top: 60px;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
-  background-color: #AB1F98;
   color: rgb(255, 255, 255);
   min-height: 1000px;
   height: auto;
-  width: 90%;
+  width: 100%;
   border-top: 10px solid rgb(82, 7, 173);
-
+  display: flex;
+  background-color: #0202025a;
+  justify-content: center;
+  /* Wyśrodkowanie poziome */
+  flex-wrap: wrap;
+  /* Dodatkowe: jeśli chcesz, aby divy łamały się na nowe linie */
 }
+
 
 #Acces_main {
   margin-top: 60px;
@@ -379,7 +409,7 @@ h2 {
   margin-right: auto;
   /* background-color: aqua; */
   color: rgb(255, 255, 255);
-  height: 550px;
+  height: 70vh;
   width: 100%;
   border-top: 10px solid rgb(82, 7, 173);
 }
@@ -388,60 +418,101 @@ h2 {
 #Deposit_2,
 #Deposit_3,
 #Deposit_4 {
-  margin-left: 2.5%;
-  height: auto;
-  max-height: 950px;
-  background-color: rgba(0, 0, 0, 0.64);
-  width: 30%;
-  float: left;
+  margin: 10px;
+  /* Dodaj margines, aby elementy nie przylegały do siebie */
+  height: fit-content;
+  max-height: 850px;
+  background-color: rgba(8, 8, 8, 0.606);
+  width: 28%;
+  padding-bottom: 20px;
+  border: 1px solid rgb(82, 7, 173);
   border-bottom: 10px solid rgb(82, 7, 173);
+
 }
 
 .Deposit_title {
   margin-bottom: 20px;
   margin-top: 40px;
   text-align: center;
-  font-size: 50px;
-  font-family: 'Gabarito', sans-serif;
-  font-weight: 500;
+  font-size: 36px;
+  font-family: "Montserrat", sans-serif;
+  ;
+  font-weight: 400;
   /* background-color: coral; */
+}
+
+#choose_button1 {
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  width: 70%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 5px solid rgb(82, 7, 173);
+  font-size: 15px;
 }
 
 #disclaimer {
   color: rgba(255, 255, 255, 0.727);
   text-align: center;
   line-height: 25px;
-  width: 80%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
-  height: 100px;
+  height: 250px;
   font-size: 25px;
   font-family: 'Archivo', sans-serif;
+  font-style: italic;
 }
+
+#Acces_info {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.727);
+  text-align: justify;
+  line-height: 35px;
+  width: 40%;
+  margin-left: 60%;
+  margin-right: auto;
+  height: 320px;
+  font-size: 18px;
+  font-family: 'Archivo', sans-serif;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  
+}
+
 :root {
   --min-line-height: 2;
   --max-line-height: 2.3;
 }
+
 .Deposit_TXT {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  width: 95%;
+  width: 70%;
   height: auto;
-  min-height: 1200px;
-  font-size: 22px;
+  min-height: 700px;
+  max-height: 700px;
+  font-size: 17px;
   text-align: justify;
-  font-family: 'Archivo', sans-serif;
-  line-height: auto;
-  line-height: var(--min-line-height);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  line-height: 30px;
   padding: 5px;
+}
+
+b {
+  font-weight: 400;
 }
 
 #Accessories_box {
 
-  background-color: rgba(0, 0, 0, 0.643);
+  background-color: rgba(0, 0, 0, 0);
   height: auto;
-  width: 86%;
+  width: auto;
+  max-width: 100%;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-left: auto;
@@ -454,10 +525,10 @@ h2 {
 
   cursor: pointer;
 
-  width: 90%;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
-  outline: 8px solid rgb(82, 7, 173);
+  outline: 3px solid rgb(82, 7, 173);
   color: white;
   font-size: 20px;
   text-align: justify;
@@ -504,7 +575,7 @@ h2 {
   margin-right: auto;
   margin-top: 2%;
   /* background-color: rgb(0, 255, 38); */
-  width: 95%;
+  width: 80%;
 
   margin-bottom: 10px;
   margin-top: 10px;
@@ -516,7 +587,7 @@ h2 {
 
   /* background-color: aqua; */
   text-align: center;
-  width: 65%;
+  width: 50%;
 
 }
 
@@ -552,31 +623,99 @@ td {
 #Contact {
   font-family: 'Archivo', sans-serif;
   margin-top: 20px;
-  margin-left: 100px;
+  padding: 50px;
   color: rgb(255, 255, 255);
-  height: 40vh;
   background-color: rgba(45, 45, 45, 0.316);
-  width: 90%;
+  width: 100%;
   border-top: 10px solid rgb(82, 7, 173);
   letter-spacing: 5px;
-  min-height: 350px; 
-  height: auto;
- 
-  
+  min-height: 350px;
+  height: 600px;
+  float: left;
+  box-sizing: border-box; /* Dodano */
 }
+
+#Contact_info {
+  float: left;
+  width: 50%;
+
+  box-sizing: border-box; /* Dodano */
+}
+
+/* Dodano nowe style */
+#Contact_content {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.727);
+  text-align: justify;
+  line-height: 35px;
+  font-size: 20px;
+  font-family: 'Archivo', sans-serif;
+  padding-right: 20px;
+  padding-top: 40px;
+  font-style: italic;
+}
+
 
 .contact_txt {
   margin-bottom: 10px;
   margin-top: 10px;
-  padding-top: 30px;
-  text-align: center;
-  font-size: 40px;
+  padding-top: 10px;
+  padding-left: 50px;
+  text-align: left;
+  font-size: 30px;
+  line-height: 50px;
+  width: 100%;
+
 }
 
+#email-link
+{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-left: 50px;
+  text-align: left;
+  font-size: 30px;
+  line-height: 50px;
+  width: 100%;
+}
+
+#email-link:hover{
+text-decoration: underline;
+cursor: pointer;
+}
+
+#regulations
+ {
+  margin-left: 50px;
+  display: inline-block; /* Upewnij się, że #regulations jest blokiem */
+  padding-top: 20px;
+  color: #ffffff; 
+  text-decoration: none;
+  height: 80px;
+  margin-top: 20px;
+  width: 400px;
+  text-align: left;
+  font-size: 30px;
+  border-top: 5px solid rgb(82, 7, 173);
+  font-family: "Montserrat", sans-serif;
+  float:left
+}
+
+#regulations:hover {
+  text-decoration: underline;
+  
+}
+
+a {
+  text-decoration: none; /* Usunięcie podkreślenia z linku */
+}
 .Title {
   color: aliceblue;
   margin-bottom: 5px;
-  margin-top: 150px;
+  margin-top: 80px;
   text-align: center;
   font-size: 50px;
   font-family: 'Gabarito', sans-serif;
@@ -587,24 +726,26 @@ td {
 .Socials2 {
 
 
-  font-family: 'Gabarito', sans-serif;
-  font-size: 40px;
-  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  color: rgba(240, 248, 255, 0.523);
 }
 
 .fa-instagram,
 .fa-square-facebook {
-  font-size: 100px;
+  font-size: 50px;
+  font-weight: 400;
 }
 
 .Socials1 {
   float: left;
-  margin-left: 15%;
+  margin-left: 78%;
 }
 
 .Socials2 {
   float: right;
-  margin-right: 15%;
+  margin-right: 0;
 }
 
 
@@ -619,8 +760,9 @@ td {
 /* Styl dla kontenera mapy */
 #map {
   margin-top: 30px;
-  height: 540px;
-  width: 60%;
+  height: 600px;
+  width: 55%;
+  margin-left: 5%;
   background-color: #AB1F98;
   float: left;
 }
@@ -783,6 +925,13 @@ input::placeholder {
 }
 
 #Dist_price {
+  margin-top: 30px;
+  font-family: 'Gabarito', sans-serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+#sum_price {
   margin-top: 30px;
   font-family: 'Gabarito', sans-serif;
   font-size: 30px;
