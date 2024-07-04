@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: url(#Nowy_wzorek);
+      }
+    </style>
+    <pattern id="Nowy_wzorek" data-name="Nowy wzorek" x="0" y="0" width="125" height="125" patternTransform="translate(-232.86 -609.04)" patternUnits="userSpaceOnUse" viewBox="0 0 125 125">
+      <g>
+        <rect class="cls-2" width="125" height="125"/>
+        <circle class="cls-1" cx="62.5" cy="62.5" r="7.98"/>
+      </g>
+    </pattern>
+  </defs>
+  <g id="Warstwa_2" data-name="Warstwa 2">
+    <rect x="0" width="500" height="500"/>
+  </g>
+  <g id="Warstwa_10" data-name="Warstwa 10">
+    <rect class="cls-3" x="-.88" width="500" height="500"/>
+  </g>
+</svg>
