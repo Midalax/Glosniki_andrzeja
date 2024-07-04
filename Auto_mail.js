@@ -62,7 +62,7 @@ function openMail() {
     Get_destination();
       const email = 'korpand@gmail.com';
       
-      const body = 'Dzień dobry, \n\n\n' + subject + ' z dodatkami: \n' + supplement_list+'\nDo lokalizacji:\n'+where;
+      const body = 'Dzień dobry, \n\n\n Numer kontaktowy: \n Imię i nazwisko: \n' + subject + ' z dodatkami: \n' + supplement_list+'\nDo lokalizacji:\n'+where;
 
       
 
