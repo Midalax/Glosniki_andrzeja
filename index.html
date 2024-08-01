@@ -8,8 +8,14 @@
 
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>KORPAND - Głośniki</title>
 
+
+ 
+
+  <title>KORPAND</title>
+  <meta name=”Description” content=" Zajmujemy się wynajmem sprzętu na imprezy i konferencję
+  w ofercie znajdują się głośniki-mikrofony-oświetlenie-maszyny do dymu
+  zapewniamy pełną obsługę sprzętu wraz z transportem" />
   <script src="Scripts.js"></script>
   <script src="Map_script.js"></script>
   <script src="Map_style.json"></script>
@@ -30,11 +36,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Archivo:wght@200;300&family=Gabarito:wght@500&family=Jost:wght@300&family=Lobster&display=swap"
     rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTONDAAZ0Qsip2UyGvPuoSnx6dSNrnWVo&libraries=places&callback=initMap" async defer></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTONDAAZ0Qsip2UyGvPuoSnx6dSNrnWVo&libraries=places&callback=initMap"
+    async defer></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 
 </head>
 
@@ -53,7 +62,7 @@
 
       <div id="Logo_back">
 
-        <a href="#Deposit_a">
+        <a href="#Deposit">
           <div class="Equipment">
             WYPOSAŻENIE
           </div>
@@ -129,7 +138,7 @@
       <br>
       <a href="https://www.instagram.com/" target="noopener">
         <div class="Socials1">
-         <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-instagram"></i>
         </div>
 
       </a>
@@ -141,7 +150,7 @@
 
     </div>
 
-    
+
 
 
 
@@ -173,9 +182,9 @@
             <b>
           <li>Darmowy transport do 10 KM</b><br><br><br>
             <h3>Cena: 300 zł<h3>
-            
-            <div id="choose_button1">Wybierz</div>
-            
+
+                <div id="choose_button1">Wybierz</div>
+
         </ul>
 
 
@@ -199,7 +208,7 @@
             <b>
           <li>Darmowy transport do 15 KM</b><br><br>
             <h3>Cena: 400 zł<h3>
-            <div id="choose_button1">Wybierz</div>
+                <div id="choose_button1">Wybierz</div>
         </ul>
 
 
@@ -218,9 +227,10 @@
           <li>2x Belki oświetleniowe <br>
           <li>Stelaż do montażu głośników (zakres regulacji 50-150 cm)<br>
           <li>Maszyna do dymu<br>
-          <b> <li>Darmowy transport do 20 KM</b><br><br>
+            <b>
+          <li>Darmowy transport do 20 KM</b><br><br>
             <h3>Cena: 450 zł<h3>
-            <div id="choose_button1">Wybierz</div>
+                <div id="choose_button1">Wybierz</div>
         </ul>
 
 
@@ -256,7 +266,7 @@
   </div>
 
   <div id="disclaimer"><i></i>
-    <b>Aby skomponować własny zestaw prosimu o kontakt telefowniczny</b><br><br>
+    Aby skomponować własny zestaw prosimu o kontakt telefowniczny<br><br>
 
     Informujemy, że wszystkie oferowane przez nas zestawy zawierają wliczone w cenę niezbędne okablowanie oraz akcesoria
     umożliwiające pełne korzystanie z danego sprzętu. <br><br><br>
@@ -268,67 +278,69 @@
   </div>
 
 
-  
+
   <br>
   <p class="Title">Transport</p>
-<a id="Acces"></a>
+  <a id="Acces"></a>
 
-<div id="Acces_main">
-    
+  <div id="Acces_main">
+
     <div id="map"></div>
 
-   
-    
+
+
     <p id="Dist_price">Cena za transport: 0 zł</p>
     <div id="route-info">
-        
 
-        <input type="text" id="destination" placeholder="Wprowadź adres aby obliczyć cenę transportu">
-        <div id="suggestions"></div>
-        <button id="find_route" onclick="findRoute()">Znajdź trasę</button>
-        <button id="restart" onclick="resetMap()"><i class="fa-solid fa-rotate-right"></i></button>
-       
+
+      <input type="text" id="destination" placeholder="Wprowadź adres aby obliczyć cenę transportu">
+      <div id="suggestions"></div>
+      <button id="find_route" onclick="findRoute()">Znajdź trasę</button>
+      <button id="restart" onclick="resetMap()"><i class="fa-solid fa-rotate-right"></i></button>
+
     </div>
     <p id="distance">Długość trasy: 0 km</p><br>
- 
-
- <div id="Acces_info">
-
-  Informujemy, że koszt transportu może nieznacznie różnić się od ceny końcowej. Jest on obliczany na podstawie odległości od siedziby naszej firmy do podanego adresu. Za każdy dodatkowy kilometr poza określonym limitem dla darmowego transportu w każdym z zestawów naliczana jest opłata w wysokości <u>3 zł.</u>
-  
-  
 
 
-</div>
-</div>
+    <div id="Acces_info">
 
-    <script>
-        
-    </script>
-
-    <!-- Skrypt do ładowania API Google Maps --> 
-    <script async defer!!!!!!!!!!!!!!!!!!!!
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTONDAAZ0Qsip2UyGvPuoSnx6dSNrnWVo&callback=initMap&libraries=places">
-
-      // Dodanie znacznika na mapie (początkowego)
-      var marker = new google.maps.AdvancedMarkerElement ({
-        position: { lat: 50.09737246885462, lng: 20.070681341066955  }, // Ustawienie pozycji na centrum mapy
-        map: map // Określenie, na której mapie ma być umieszczony znacznik
-      });
-
-
-    </script>
+      Informujemy, że koszt transportu może nieznacznie różnić się od ceny końcowej. Jest on obliczany na podstawie
+      odległości od siedziby naszej firmy do podanego adresu. Za każdy dodatkowy kilometr poza określonym limitem dla
+      darmowego transportu w każdym z zestawów naliczana jest opłata w wysokości <u>3 zł.</u>
 
 
 
 
-    </div> 
+    </div>
+  </div>
 
-   
+  <script>
+
+  </script>
+
+  <!-- Skrypt do ładowania API Google Maps -->
+  <script async defer!!!!!!!!!!!!!!!!!!!!
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTONDAAZ0Qsip2UyGvPuoSnx6dSNrnWVo&callback=initMap&libraries=places">
+    // Dodanie znacznika na mapie (początkowego)
+    var marker = new google.maps.AdvancedMarkerElement({
+      position: {
+        lat: 50.09737246885462,
+        lng: 20.070681341066955
+      }, // Ustawienie pozycji na centrum mapy
+      map: map // Określenie, na której mapie ma być umieszczony znacznik
+    });
+  </script>
 
 
 
-  
+
+  </div>
+
+
+
+
+
+
   <p class="Title">Kontakt</p>
   <div id="Contact">
     <div id="Contact_info">
@@ -337,36 +349,39 @@
         <br>
         <i class="fa-regular fa-envelope"></i> Email:
         <div id="email-link" onclick="openMail()">
-         korpand@gmail.com<br><h4>(kliknij aby wygenerować wiadomosć)<h4>
+          korpand@gmail.com<br>
+          <h4>(kliknij aby wygenerować wiadomosć)<h4>
         </div>
         <a href="Regulamin przykładowy.pdf" target="_blank">
-    <div id="regulations">
-      <i class="fa-solid fa-file-pdf"></i>   Regulamin
-    </div>
-  </a>
+          <div id="regulations">
+            <i class="fa-solid fa-file-pdf"></i> Regulamin
+          </div>
+        </a>
 
 
-        
-        
-       </p>
+
+
+      </p>
     </div>
     <div id="Contact_content">
-      Pragniemy uprzejmie poinformować, że niezależnie od wybranej formy kontaktu, aby potwierdzić zamówienie, konieczne jest dokonanie kontaktu telefonicznego. W przypadku przesłania wiadomości e-mail, z przyjemnością oddzwonimy w celu finalizacji zamówienia.
+      Pragniemy uprzejmie poinformować, że niezależnie od wybranej formy kontaktu, aby potwierdzić zamówienie, konieczne
+      jest dokonanie kontaktu telefonicznego. W przypadku przesłania wiadomości e-mail, z przyjemnością oddzwonimy w
+      celu finalizacji zamówienia.
 
-Dziękujemy za zrozumienie i zachęcamy do kontaktu! 
+      Dziękujemy za zrozumienie i zachęcamy do kontaktu!
     </div>
 
-   
- 
-  </div>
-  
-  
+
 
   </div>
-  
 
 
-    
+
+  </div>
+
+
+
+
 
 </body>
 
