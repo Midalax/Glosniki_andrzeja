@@ -1,141 +1,74 @@
-var Supplement_A_state = false,
-    Supplement_B_state = false,
-    Supplement_C_state = false;
+// Stany suplementów i opcji
+var Supplement_state = [false, false, false]; // A, B, C
+var Option_state = [false, false, false]; // A, B, C
+var color_selected = "#07ad15", color_base = "#5207ad";
 
+// Ceny i dodatkowe opcje
+var Option_prices = [300, 400, 450]; // zestawy podstawowy, rozszerzony, pełny
+var Supplement_prices = [20, 50, 30]; // mikrofon przewodowy, bezprzewodowy, spódnica
+var Option_free_km = [10, 15, 20]; 
 
-var Option_state = [false, false, false, false];
+var FreeKM = 0, price_sum = 0, Option_price_buffor = 0;
 
-var color_selected = "#07ad15";
-
-var color_base = "#5207ad";
-
-var Option_A_price = 300, //zestaw podstawowy
-    Option_B_price = 400, //zestaw rozrzeszony
-    Option_C_price = 450; //zestaw pełny
-
-var Option_A_free = 10, //zestaw podstawowy
-    Option_B_free = 15, //zestaw rozrzeszony
-    Option_C_free = 20; //zestaw pełny
-
-var Option_A_km = 10, //zestaw podstawowy
-    Option_B_km = 15, //zestaw rozrzeszony
-    Option_C_km = 20; //zestaw pełny
-
-var Supplement_A_price = 20, //mikrofon przewodowy
-    Supplement_B_price = 50, //mikrofon bezprzewodowy
-    Supplement_C_price = 10; //płyn do dymiarki
-
- var FreeKM=0;
-
-var price_sum = 0;
-var price_now = 0;
-var Option_price_buffor = 0;
-
-function Supplement_A() {
-    var Opt_a = document.getElementById("Accessories");
-    Supplement_A_state = !Supplement_A_state;
-    console.log(Supplement_A_state);
-    TrunONOFF(Supplement_A_state, Opt_a, Supplement_A_price);
+// Funkcje wyboru suplementów
+function ToggleSupplement(index, id) {
+    Supplement_state[index] = !Supplement_state[index]; // Zmieniamy stan
+    var priceChange = Supplement_state[index] ? Supplement_prices[index] : -Supplement_prices[index];
+    UpdatePrice(priceChange); // Dodanie/odjęcie ceny
+    UpdateBorderColor(id, Supplement_state[index]); // Zmiana koloru obramowania
 }
 
+function Supplement_A() { ToggleSupplement(0, "Accessories"); }
+function Supplement_B() { ToggleSupplement(1, "Accessories2"); }
+function Supplement_C() { ToggleSupplement(2, "Accessories3"); }
 
-function Supplement_B() {
-    var Opt_b = document.getElementById("Accessories2");
-    Supplement_B_state = !Supplement_B_state;
-    console.log(Supplement_B_state);
-    TrunONOFF(Supplement_B_state, Opt_b, Supplement_B_price);
+// Funkcja deselekcji wszystkich opcji
+function DeselectAll() {
+    ["Deposit_1", "Deposit_2", "Deposit_3"].forEach(id => document.getElementById(id).style.borderColor = color_base);
+    Option_state.fill(false);
+    UpdatePrice(-Option_price_buffor); // Odjęcie ceny poprzedniej opcji
 }
 
-function Supplement_C() {
-    var Opt_C = document.getElementById("Accessories3");
-    Supplement_C_state = !Supplement_C_state;
-    console.log(Supplement_C_state);
-    TrunONOFF(Supplement_C_state, Opt_C, Supplement_C_price);
+// Funkcja wyboru opcji
+function SelectOption(index, id) {
+    if (Option_state[index]) return; // Jeśli już jest wybrana, nie rób nic
+
+    DeselectAll(); // Odznacz wszystkie inne opcje
+    Option_state[index] = true; // Zaznacz aktualnie wybraną
+    Option_price_buffor = Option_prices[index]; // Zapisujemy aktualną cenę do buffora
+    FreeKM = Option_free_km[index]; // Zaktualizuj darmowe kilometry
+    UpdatePrice(Option_price_buffor); // Dodajemy cenę opcji
+    UpdateBorderColor(id, true); // Zmiana koloru obramowania opcji
 }
 
+// Funkcje dla opcji
+function Option_A() { SelectOption(0, "Deposit_1"); }
+function Option_B() { SelectOption(1, "Deposit_2"); }
+function Option_C() { SelectOption(2, "Deposit_3"); }
 
+// Aktualizacja ceny
+function UpdatePrice(amount) {
+    price_sum += amount; // Aktualizacja sumy ceny
+    document.getElementById("price").innerHTML = price_sum + "zł"; // Aktualizacja wyświetlanej ceny
+}
 
+// Aktualizacja koloru obramowania
+function UpdateBorderColor(elementId, isSelected) {
+    var element = document.getElementById(elementId);
+    element.style.outlineColor = isSelected ? color_selected : color_base; // Zmiana koloru granicy
+}
 
-function Deselect(Except, price_except) {
-    document.getElementById("Deposit_1").style.borderColor = color_base;
-    document.getElementById("Deposit_2").style.borderColor = color_base;
-    document.getElementById("Deposit_3").style.borderColor = color_base;
-    
-    
-    for (let i = 0; i <= 3; i++)
-    {
-        Option_state[i]=false;
-        Except=true;
+// Funkcje przycisków wyboru
+function UnchooseAll() {
+    for (let i = 1; i <= 3; i++) {
+        document.getElementById("choose_button" + i).style = "background-color: #000; outline-color: #750BD2";
+        document.getElementById("choose_button" + i).innerText = "Wybierz";
     }
-    console.log(Option_price_buffor);
-    price(Option_price_buffor*(-1));
 }
 
-function Select(Option_to_select)
-{
-    Option_to_select.style.borderColor = color_selected;
-    
-    console.log("wybieram");
-   
-}
-
-function Option_A() {
-
-    console.log("Działam Opcion A")
-    var Option_A = document.getElementById("Deposit_1");
-    Deselect(Option_state[0]);
-    Option_state[0] = !Option_state[0];
-    Select(Option_A, Option_A_price);
-    Option_price_buffor = Option_A_price;
-    price(Option_price_buffor);
-    FreeKM = Option_A_free;
-    
-}
-
-function Option_B() {
-
-    Deselect();
-    var Option_B = document.getElementById("Deposit_2");
-    Option_state[1] = !Option_state[1];
-    Select(Option_B);
-    Option_price_buffor = Option_B_price;
-    price(Option_price_buffor);
-    FreeKM = Option_B_free;
-}
-
-function Option_C() {
-    Deselect();
-    var Option_C = document.getElementById("Deposit_3");
-    Option_state[2] = !Option_state[2];
-    Select(Option_C);
-    Option_price_buffor = Option_C_price;
-    price(Option_price_buffor);
-    FreeKM = Option_C_free;
-}
-
-
-
-////////////////////////////////////////////////////////////
-function TrunONOFF(OptionONNOFF, OptionDiv, OptionPrice) {
-    if (OptionONNOFF == true) {
-
-        price(OptionPrice);
-        OptionDiv.style.outlineColor = "#07ad15";
-    } else {
-
-        price(OptionPrice * (-1));
-        OptionDiv.style.outlineColor = "#5207ad";
-
-    }
-
-}
-//////////////////////////////////////////////////////////////
-function price(OptionalPrice) {
-    var currentprice = document.getElementById("price");
-    console.log("LICZE")
-    price_now = OptionalPrice + price_now;
-    console.log(price_now+"price now")
-    price_sum = price_now;
-    console.log(price_sum+"price sum")
-    currentprice.innerHTML = "Cena = " + price_sum + "zł";
+function Choose(buttonIndex) {
+    UnchooseAll(); // Odznacz wszystkie przyciski
+    let button = document.getElementById("choose_button" + buttonIndex);
+    button.style.outlineColor = color_selected;
+    button.innerHTML = '<i class="fa-solid fa-check"></i>'; // Zaznacz wybrany przycisk
 }

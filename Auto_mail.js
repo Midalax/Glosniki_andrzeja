@@ -60,11 +60,10 @@ function openMail() {
     Option_creator();
     Supplement_creator();
     Get_destination();
-      const email = 'korpand@gmail.com';
-      
-      const body = 'Dzień dobry, \n\n\n Numer kontaktowy: \n Imię i nazwisko: \n' + subject + ' z dodatkami: \n' + supplement_list+'\nDo lokalizacji:\n'+where;
+    // email firmowy
+      const email = 'korpand@interia.pl'; 
 
-      
+      const body = 'Dzień dobry, \n\n\n Numer kontaktowy: \n Imię i nazwisko: \n' + subject + ' z dodatkami: \n' + supplement_list+'\nDo lokalizacji:\n'+where;
 
       var mailtoLink = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       window.location.href = mailtoLink;

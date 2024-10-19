@@ -13,7 +13,7 @@
   --First_color: rgb(255, 255, 255);
 
   /* Kolor obwodek/dodatkowy */
-  --Second_color: rgba(159, 42, 238, 0.975);
+  --Second_color: rgba(117, 11, 210, 0.975);
 
   /* Kolor tla gornej belki nawigacji */
   --Header_color: #000000;
@@ -68,7 +68,7 @@ body {
 /* punktatory */
 li {
   list-style: square inside;
-  text-align: center;
+  text-align: left;
 }
 
 li::marker {
@@ -188,23 +188,29 @@ header {
 }
 
 /* zakladki w gornej belce (skalowanie) */
-@media (min-width: 1000px) and (max-width: 1280px) {
+@media (min-width: 1000px) and (max-width: 1200px) {
   .Equipment {
+    margin-top: 8px;
     margin-left: 500px;
+    font-size: 15px;
   }
 
   .Acces {
-    margin-left: 680px;
+    margin-top: 8px;
+    font-size: 15px;
+    margin-left: 620px;
   }
 
   .Contact {
-    margin-left: 860px;
+    margin-top: 8px;
+    font-size: 15px;
+    margin-left: 720px;
   }
 }
 
 
 
-@media (min-width: 1280px) and (max-width: 1440px) {
+@media (min-width: 1220px) and (max-width: 1440px) {
   .Equipment {
     margin-left: 500px;
   }
@@ -296,7 +302,6 @@ header {
   min-height: 1100px;
   max-height: 1500px;
   background-color: #989898;
-  border-bottom: 10px solid var(--Second_color);
   background-image: url('images/Backgorund_movie.gif');
   background-blend-mode: multiply;
   background-size: cover;
@@ -351,11 +356,12 @@ h2 {
 /* ceny */
 h3 {
   z-index: 50;
-  font-size: 28px;
+  font-size: 22px;
   letter-spacing: 5px;
   font-family: var(--Font_second);
   font-weight: 300;
   line-height: 50px;
+  text-align: left;
 }
 
 /* komentarze opcji */
@@ -370,14 +376,12 @@ h4 {
 
 /* wyposażenie (glowne) */
 #Deposit {
-  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   color: var(--Text_color);
   min-height: 1000px;
   height: auto;
   width: 100%;
-  border-top: var(--border_width_small) solid var(--Second_color);
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -389,60 +393,112 @@ h4 {
   margin-left: auto;
   margin-right: auto;
   color: var(--Text_color);
-  height: 70vh;
+  height: fit-content;
   width: 100%;
-  border-top: var(--border_width_wide) solid var(--Second_color);
+ 
 }
 
 /* opcje wyposażenia */
 #Deposit_1,
 #Deposit_2,
 #Deposit_3{
-  margin: 10px;
-  height: fit-content;
-  max-height: 850px;
-  background-color: var(--Background_element_color);
+  
+  height: calc(fit-content+20px);
+  min-height: 600px;
+  max-height: 1100px;
+  background-color: #000000;
   width: 28%;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 20px;
-  border: 1px solid var(--Second_color);
-  border-bottom: 10px solid var(--Second_color);
+  border: 2px solid var(--Second_color);
+  border-radius: 50px;
+  
+}
+
+.deposit_line
+{
+  border-width: 4px;
+  border-style: solid;
+  border-color: var(--Second_color);
+}
+
+#Deposit_line_1
+{
+  width: 720px;
+}
+
+#Deposit_line_2
+{
+  width: 520px;
+}
+
+#Deposit_line_3
+{
+  width: 580px;
+}
+
+#Deposit_line_4
+{
+  width: 520px;
 }
 
 /* nazwa zestawu */
 .Deposit_title {
-  margin-bottom: 20px;
-  margin-top: 40px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  background-color: #000000;
   text-align: center;
-  font-size: 36px;
+  font-size: 40px;
   font-family: var(--Font_second);
-  font-weight: 400;
+  font-weight: 500;
+  /* letter-spacing: 8px; */
+  
 }
 
 /* przycisk "wybierz" zestaw */
-#choose_button1 {
+#choose_button1, #choose_button2, #choose_button3 {
   font-family: var(--Font_second);
   cursor: pointer;
-  width: 70%;
-  margin-top: 50px;
+  width: 90%;
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  border: 5px solid var(--Second_color);
-  font-size: 15px;
+  outline: 5px solid var(--Second_color);
+  border-radius: 40px;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 5px;
+  font-weight: 500;
+  letter-spacing: 8px;
+  z-index: 50;
+  padding: 10px 20px;
+  transition: width 0.5s ease-in-out; 
+
+}
+
+#choose_button1:hover, #choose_button2:hover, #choose_button3:hover {
+  width: 99%; /* Powiększamy outline na hover */
 }
 
 /* komentarz do wybrania zestawu */
 #disclaimer {
-  color: var(--Transparent_text_color);
+  color: var(--Text_color);
   text-align: justify;
   line-height: 25px;
-  width: 50%;
+  width: 40%;
   margin-left: auto;
   margin-right: auto;
-  height: 280px;
   font-size: 20px;
+  margin-left: 250px;
+  margin-top: 50px;
+  min-height: 400px;
+  padding-bottom: 0px;
   font-family:  var(--Font_second);
-  font-weight: 300;
-  font-style: italic;
+  font-weight: 200;
+  letter-spacing: 2px;
+  float:left;
 }
 
 /* komentarz do transportu */
@@ -454,14 +510,14 @@ h4 {
   width: 40%;
   margin-left: 60%;
   margin-right: auto;
-  height: 320px;
+  height: 450px;
   font-size: 18px;
   font-weight: 300;
   font-family:  var(--Font_second);
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 2%;
-
+  /* background-color: aqua; */
 }
 
 :root {
@@ -473,16 +529,17 @@ h4 {
 .Deposit_TXT {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 5px;
   width: 70%;
   height: auto;
-  min-height: 700px;
+  min-height: 500px;
   max-height: 700px;
   font-size: 17px;
   text-align: justify;
   font-family: var(--Font_second);
   font-weight: 200;
-  line-height: 30px;
+  line-height: 40px;
+  letter-spacing: 2px;
   padding: 5px;
   
 }
@@ -494,59 +551,64 @@ b {
 
 /* dodatki */
 #Accessories_box {
-  height: auto;
-  width: auto;
-  max-width: 100%;
+  height: fit-content;
+  width: 40%;
+  float: left;
+  min-height: 500px;
   padding-top: 5px;
   padding-bottom: 5px;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
 #Accessories,
 #Accessories2,
 #Accessories3 {
+  border-radius: 40px;
   cursor: pointer;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 80%;
+  height: fit-content;
+  padding: 1px;
   outline: 3px solid var(--Second_color);
   color: var(--Text_color);
-  font-size: 20px;
+  font-size: 17px;
   text-align: justify;
   line-height: 30px;
   margin-top: 50px;
   margin-bottom: 50px;
   z-index: 50;
-  font-size: 20px;
   letter-spacing: 5px;
   font-family: var(--Font_second);
   font-weight: 200;
   line-height: 50px;
   text-align: center;
   background-color: var(--Background_element_color);
+  margin-left: 10%;
+  transition: width 0.5s ease-in-out; 
 }
 
+
+#Accessories:hover, #Accessories2:hover, #Accessories3:hover {
+  width: 85%; /* Powiększamy outline na hover */
+}
 /* cena */
 #price {
-  cursor: pointer;
-  width: 50%;
+  margin-top: 80px;
+  width: 100%;
   height: 70px;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: 10px solid var(--Second_color);
-  background-color: var(--Background_element_color);
   color: var(--Text_color);
-  text-align: justify;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  z-index: 50;
-  font-size: 25px;
+  text-align: center; /* Wyrównanie tekstu do środka */
+  font-size: 30px;
   letter-spacing: 5px;
   font-family: var(--Font_second);
+  background-color: #111111;
   font-weight: 200;
   line-height: 70px;
-  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 7px solid var(--Second_color);
+  border-radius: 10px 10px 5px 5px;
 }
 
 /* obrazki zestawu */
@@ -554,9 +616,9 @@ b {
   margin-left: auto;
   margin-right: auto;
   margin-top: 2%;
-  width: 80%;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  width: 60%;
+  margin-bottom: 2px;
+  margin-top: 2px;
   text-align: center;
 }
 
@@ -568,12 +630,12 @@ b {
 /* kontakt */
 #Contact {
   font-family: 'Archivo', sans-serif;
-  margin-top: 20px;
+  
   padding: 50px;
   color: rgb(255, 255, 255);
-  background-color: var(--Background_element_color);
+  
   width: 100%;
-  border-top: 10px solid var(--Second_color);
+  
   letter-spacing: 5px;
   min-height: 350px;
   height: 600px;
@@ -592,17 +654,23 @@ b {
 
 /* kontener na info */
 #Contact_content {
-  float: left;
-  width: 50%;
-  box-sizing: border-box;
-  color: var(--Transparent_text_color);
+  color: var(--Text_color);
   text-align: justify;
-  line-height: 35px;
-  font-size: 20px;
-  font-family: 'Archivo', sans-serif;
-  padding-right: 20px;
-  padding-top: 40px;
-  font-style: italic;
+  line-height: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 22px;
+  font-family:  var(--Font_second);
+  font-weight: 200;
+  letter-spacing: 2px;
+  float: left;
+  width: 48%;
+  box-sizing: border-box;
+  text-align: justify;
+  line-height: 40px;
+  padding-top: 20px;
+
+
 }
 
 /* tekst informacji kontaktowych */
@@ -635,7 +703,7 @@ b {
 }
 
 #regulations {
-  margin-left: 50px;
+ 
   display: inline-block;
   padding-top: 20px;
   color: var(--Text_color);
@@ -643,15 +711,17 @@ b {
   height: 80px;
   margin-top: 20px;
   width: 400px;
-  text-align: left;
+  text-align: center;
   font-size: 30px;
-  border-top: 5px solid var(--Second_color);
   font-family: "Montserrat", sans-serif;
   float: left;
+  border: 3px solid var(--Second_color);
+  border-radius: 50px;
+  transition: width 0.5s ease;
 }
 
 #regulations:hover {
-  text-decoration: underline;
+ width: 450px;
 }
 
 a {
@@ -661,9 +731,10 @@ a {
 .Title {
   color: var(--Text_color);
   margin-bottom: 5px;
-  margin-top: 80px;
-  text-align: center;
-  font-size: 50px;
+  margin-top: 180px;
+  text-align: left;
+  padding-left: 250px;
+  font-size: 80px;
   font-family: var(--Font_first);
   font-weight: 500;
 }
@@ -718,13 +789,12 @@ a {
 
 /* Styl dla przycisku Znajdź trasę */
 #find_route {
-  margin-right: 10px;
-  font-size: 30px;
+  font-size: 18px;
   float: left;
-  width: 60%;
+  width:10%;
   height: 70px;
-  margin-left: 12.5%;
-  background-color: var(--Background_element_color);
+  
+  background-color: #111111;
   color: var(--Text_color);
   padding: 8px 16px;
   border: none;
@@ -735,6 +805,8 @@ a {
   outline: none;
   background-image: linear-gradient(to right, transparent 50%, var(--Second_color) 50%);
   background-size: 200% 100%;
+  
+  border-radius: 0px 10px 5px 0px;
   transition: background-position 0.5s;
 }
 
@@ -780,18 +852,20 @@ button:hover {
 
 /* Styl dla pola wprowadzania */
 input {
-  font-size: 18px;
+  font-size: 30px;
   padding: 5px 10px;
   outline: none;
   border: none;
   border-bottom: 5px solid var(--Second_color);
+  border-radius: 0%;
   cursor: pointer;
   font-family: var(--Font_first);
   margin-top: 20px;
   background: var(--Background_element_color);
   color: var(--Text_color);
-
+  background-color: #111111;
   height: 70px;
+  border-radius: 10px 0px 0px 5px;
   text-align: center;
 }
 
@@ -809,12 +883,13 @@ input::placeholder {
 }
 
 #destination {
-  width: 75%;
+  width: 70%;
+  float: left;
+  margin-left: 70px;
 }
 
 #suggestions {
   font-family: var(--Font_second);
-  background-color: #AB1F98;
 }
 
 /* Styl dla podpowiedzi adresów */
@@ -854,11 +929,12 @@ input::placeholder {
   color: var(--Transparent_text_color);
   font-size: 20px;
   text-align: center;
+ 
 }
 
 /* cena za transport */
 #Dist_price {
-  margin-top: 30px;
+  margin-top: 10px;
   font-family: var(--Font_first);
   font-size: 30px;
   text-align: center;
@@ -870,4 +946,13 @@ input::placeholder {
   font-family: var(--Font_first);
   font-size: 30px;
   text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: var(--Text_color);
+  color: white;
+}
+.fa-check{
+  color: #07ad15;
 }

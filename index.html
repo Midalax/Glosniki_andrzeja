@@ -13,15 +13,17 @@
  
 
   <title>KORPAND</title>
-  <meta name=”Description” content=" Zajmujemy się wynajmem sprzętu na imprezy i konferencję
-  w ofercie znajdują się głośniki-mikrofony-oświetlenie-maszyny do dymu
-  zapewniamy pełną obsługę sprzętu wraz z transportem" />
+  <meta name=”Description” content=" 
+Zajmujemy się wynajmem sprzętu na imprezy i konferencje, zapewniając kompleksową obsługę techniczną Twojego wydarzenia. W naszej ofercie znajdziesz:
+Głośniki - Mikrofony - Oświetlenie - Maszyny do dymu 
+Oferujemy pełną obsługę sprzętu wraz z transportem, aby Twoje wydarzenie przebiegło bez zakłóceń. Skontaktuj się z nami, aby omówić szczegóły i dostosować ofertę do Twoich potrzeb!
+" />
   <script src="Scripts.js"></script>
   <script src="Map_script.js"></script>
   <script src="Map_style.json"></script>
   <script src="Auto_mail.js"></script>
   <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
-
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" media="screen and (min-width: 200px) and (max-width: 1000px)" href="style2.css">
 
@@ -55,6 +57,7 @@
 <body>
 
   <header>
+
     <!--Menu -->
     <div id="Header">
       <!--górna stopka-->
@@ -79,18 +82,6 @@
             KONTAKT
           </div>
         </a>
-
-
-
-
-        <!-- <a href="https://www.example.com">
-          <div class="Language">
-            ENG 
-            <i class="fa-sharp fa-solid fa-language"></i>
-            </div>
-        </a> -->
-
-
 
         <a href="#top" aria-label="Korpand logo">
           <div id="Logo_Shadow">
@@ -117,14 +108,17 @@
 
 
     </div>
+    
 
 
-
-
+   
   </header>
 
-
-
+  
+    
+  </div>
+  
+  </div>
   <div id="Baner">
     <a id="top"></a>
     <div id="Baner_text">
@@ -136,13 +130,13 @@
 
       </h2>
       <br>
-      <a href="https://www.instagram.com/" target="noopener">
+      <a href="https://www.instagram.com/_korpand/" target="noopener">
         <div class="Socials1">
           <i class="fa-brands fa-instagram"></i>
         </div>
 
       </a>
-      <a href="https://www.facebook.com/" target="noopener">
+      <a href="https://www.facebook.com/profile.php?id=100088240658061" target="noopener">
         <div class="Socials2">
           <i class="fa-brands fa-square-facebook"></i>
         </div>
@@ -152,13 +146,14 @@
 
 
 
-
+    
 
 
   </div>
 
   <p class="Title">Wyposażenie</p>
-
+  <br>
+<hr id="Deposit_line_1" class="deposit_line">
   <a id="Deposit_a"></a>
 
   <div id="Deposit">
@@ -171,19 +166,19 @@
       <div class="Deposit_TXT">
         <br>
         <ul>
-          <li>2x Kolumny aktywne o mocy 200W (2x100W)
+          <li>2x Kolumny aktywne o mocy 2000W (2x1000W)
             <br>
 
-          <li>Stelaż do montażu głośników (zakres regulacji 50-150 cm)
+          <li>Statyw do montażu głośników (zakres regulacji 100-150 cm)
             <br>
 
           <li>Mixer
 
             <b>
-          <li>Darmowy transport do 10 KM</b><br><br><br>
+          <li>Darmowy transport do 10 KM</b><br><br><br><br>
             <h3>Cena: 300 zł<h3>
 
-                <div id="choose_button1">Wybierz</div>
+                <div id="choose_button1" onclick="Choose(1)">Wybierz</div>
 
         </ul>
 
@@ -191,7 +186,7 @@
       </div>
     </div>
 
-    <div id="Deposit_2" onclick="Option_B()">
+    <div id="Deposit_2" onclick="Option_B() ">
       <p class="Deposit_title">Rozszerzony</p>
       <div class="Deposit_IMG">
         <img alt="" id="Speaker_img" src="images/speakers_2.png" />
@@ -200,18 +195,18 @@
 
         <br>
         <ul>
-          <li>2x Kolumny aktywne o mocy 200W (2x100W)<br>
-          <li>Stelaż do montażu głośników (zakres regulacji 50-150 cm)<br>
+          <li>2x Kolumny aktywne o mocy 2000W (2x1000W)<br>
+          <li>Stelaż do montażu głośników (zakres regulacji 100-150 cm)<br>
           <li>Mixer<br>
           <li>2x Belki oświetleniowe<br>
 
             <b>
-          <li>Darmowy transport do 15 KM</b><br><br>
+          <li>Darmowy transport do 15 KM</b><br><br><br>
             <h3>Cena: 400 zł<h3>
-                <div id="choose_button1">Wybierz</div>
+                <div id="choose_button2" onclick="Choose(2)">Wybierz</div>
         </ul>
 
-
+        
       </div>
     </div>
 
@@ -223,14 +218,14 @@
       <div class="Deposit_TXT">
         <br>
         <ul>
-          <li>2x Kolumna aktywna o mocy 200W (2x100W)<br>
+          <li>2x Kolumna aktywna o mocy 2000W (2x1000W)<br>
           <li>2x Belki oświetleniowe <br>
-          <li>Stelaż do montażu głośników (zakres regulacji 50-150 cm)<br>
+          <li>Stelaż do montażu głośników (zakres regulacji 100-150 cm)<br>
           <li>Maszyna do dymu<br>
             <b>
-          <li>Darmowy transport do 20 KM</b><br><br>
+          <li>Darmowy transport do 20 KM</b><br><br><br>
             <h3>Cena: 450 zł<h3>
-                <div id="choose_button1">Wybierz</div>
+                <div id="choose_button3" onclick="Choose(3)">Wybierz</div>
         </ul>
 
 
@@ -246,24 +241,11 @@
   </div>
 
 
+  <p class="Title">Dodatki</p>
+  
 
-  <div id="Accessories_box">
-    <div id="Accessories" onclick="Supplement_A()">
-      <i class="fa-solid fa-microphone"></i> Mikrofon przewodowy (20zł)
-    </div>
-    <div id="Accessories2" onclick="Supplement_B()">
-      <i class="fa-solid fa-microphone-lines"></i> Mikrofon bezprzewodowy (50zł)
-    </div>
-    <div id="Accessories3" onclick="Supplement_C()">
-      <i class="fa-solid fa-droplet"></i> Dodatkowy płyn do dymiarki (10zł)
-    </div>
+  <hr id="Deposit_line_2" class="deposit_line">
 
-
-
-  </div>
-
-  <div id="price">Kliknij wybrany zestaw</p>
-  </div>
 
   <div id="disclaimer"><i></i>
     Aby skomponować własny zestaw prosimu o kontakt telefowniczny<br><br>
@@ -273,14 +255,36 @@
 
     Montaż i demontaż mogą być przeprowadzone jedynie przez pracowników Korpand i są one wliczone w cenę każdego
     zestawu.
+<div id="price">Suma zamówienia</div>
+  </div>
+  
 
+
+
+  <div id="Accessories_box">
+    <div id="Accessories" onclick="Supplement_A()">
+      <i class="fa-solid fa-microphone"></i> Mikrofon przewodowy (20zł)
+    </div>
+    <div id="Accessories2" onclick="Supplement_B()">
+      <i class="fa-solid fa-microphone-lines"></i> Mikrofon bezprzewodowy (50zł)
+    </div>
+    <div id="Accessories3" onclick="Supplement_C()">
+      <i class="fa-solid fa-eye-slash"></i> Spódnica maskująca statyw (30zł)
+    </div>
+
+    
 
   </div>
 
+  
+
+  
 
 
-  <br>
-  <p class="Title">Transport</p>
+
+
+  <p class="Title" style="margin-top: 700px;">Transport</p>
+  <hr id="Deposit_line_3" class="deposit_line">
   <a id="Acces"></a>
 
   <div id="Acces_main">
@@ -289,34 +293,30 @@
 
 
 
-    <p id="Dist_price">Cena za transport: 0 zł</p>
+    
     <div id="route-info">
 
 
-      <input type="text" id="destination" placeholder="Wprowadź adres aby obliczyć cenę transportu">
+      <input type="text" id="destination" placeholder="Wprowadź adres dostawy">
+      <button id="find_route" onclick="findRoute()"><i class="fa-solid fa-magnifying-glass"></i></button>
       <div id="suggestions"></div>
-      <button id="find_route" onclick="findRoute()">Znajdź trasę</button>
-      <button id="restart" onclick="resetMap()"><i class="fa-solid fa-rotate-right"></i></button>
+      
 
     </div>
-    <p id="distance">Długość trasy: 0 km</p><br>
-
-
+    
+   
     <div id="Acces_info">
-
       Informujemy, że koszt transportu może nieznacznie różnić się od ceny końcowej. Jest on obliczany na podstawie
       odległości od siedziby naszej firmy do podanego adresu. Za każdy dodatkowy kilometr poza określonym limitem dla
       darmowego transportu w każdym z zestawów naliczana jest opłata w wysokości <u>3 zł.</u>
-
-
-
-
     </div>
+     <p id="Dist_price"></p>
+    <br>
+    <p id="distance"></p>
+    <br>
   </div>
-
-  <script>
-
-  </script>
+ 
+ 
 
   <!-- Skrypt do ładowania API Google Maps -->
   <script async defer!!!!!!!!!!!!!!!!!!!!
@@ -342,21 +342,18 @@
 
 
   <p class="Title">Kontakt</p>
+  <hr id="Deposit_line_4" class="deposit_line">
   <div id="Contact">
     <div id="Contact_info">
-      <p class="contact_txt"><i class="fa-solid fa-phone"></i>
-        Telefon:<br> +48 123-456-789<br>
+     <a href="tel: +48 780 500 293"> <p class="contact_txt"><i class="fa-solid fa-phone"></i>
+        Telefon:<br> +48 780 500 293<br></a>
         <br>
         <i class="fa-regular fa-envelope"></i> Email:
         <div id="email-link" onclick="openMail()">
-          korpand@gmail.com<br>
+          korpand@interia.pl<br>
           <h4>(kliknij aby wygenerować wiadomosć)<h4>
         </div>
-        <a href="Regulamin przykładowy.pdf" target="_blank">
-          <div id="regulations">
-            <i class="fa-solid fa-file-pdf"></i> Regulamin
-          </div>
-        </a>
+       
 
 
 
@@ -369,9 +366,13 @@
       celu finalizacji zamówienia.
 
       Dziękujemy za zrozumienie i zachęcamy do kontaktu!
+    </div> <a href="images/Umowa_wynajmu_korpand.pdf" target="_blank">
+          
+        
+    <div id="regulations">
+      <i class="fa-solid fa-file-pdf"></i> Regulamin
     </div>
-
-
+</a>
 
   </div>
 
